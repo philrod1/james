@@ -12,8 +12,6 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-import org.jcodec.api.SequenceEncoder;
-
 
 public class BufferedImageScreen extends JPanel implements Screen {
 	private static final long serialVersionUID = -7316069649903725892L;
@@ -21,47 +19,17 @@ public class BufferedImageScreen extends JPanel implements Screen {
 	private final BufferedImage[] bi;
 	private final double ratio;
 	private int biIndex = 0;
-	
-	private final boolean record;
-	
-	private SequenceEncoder enc;
 
-	public BufferedImageScreen (int width, int height, boolean record) {
+	public BufferedImageScreen (int width, int height) {
 		bi = new BufferedImage[]{new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB),
 								 new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)};
 		ratio = (double)width / (double)height;
 		setPreferredSize(new Dimension(width*2, height*2));
 		setBackground(Color.BLACK);
-		this.record = record;
-		if(record) {
-			try {
-				int time = (int) (System.currentTimeMillis() / 60000L);
-				File outputVideo = new File("res/vid"+time+".mp4");
-				enc = new SequenceEncoder(outputVideo);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
 	}
 
 	@Override
 	public void blit() {
-		if(record) {
-			if(enc == null) {
-				int time = (int) (System.currentTimeMillis() / 60000L);
-				File outputVideo = new File("res/vid"+time+".mp4");
-				try {
-					enc = new SequenceEncoder(outputVideo);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-			try {
-				enc.encodeImage(bi[0]);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
 		biIndex = (biIndex + 1) % 2;
 		repaint();
 	}
@@ -107,14 +75,6 @@ public class BufferedImageScreen extends JPanel implements Screen {
 	public void saveScreenShot() {
 		int time = (int) (System.currentTimeMillis() / 60000L);
 		File outputImage = new File("res/img"+time+".png");
-		if(record) {
-			try {
-				enc.finish();
-				enc = null;
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
 		try {
 			ImageIO.write(bi[0], "png", outputImage);
 		} catch (IOException e) {

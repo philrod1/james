@@ -96,7 +96,7 @@ public abstract class GenericVideo {
 		this.orientation = orientation;
 	}
 	
-	public int init(char[][] memoryRegion, boolean record) {
+	public int init(char[][] memoryRegion) {
 		int i;
 		char convPalette[] = new char[3 * MAX_PENS];
 		char convTable[] = new char[MAX_COLOR_TUPLE * MAX_COLOR_CODES];
@@ -125,7 +125,7 @@ public abstract class GenericVideo {
 			colourTable = convTable;
 		}
 
-		createDisplay(record);
+		createDisplay();
 
 		for (i = 0; i < totalColours; i++) {
 			pens[i] = (char) obtainPen(cPalette[3 * i],
@@ -153,8 +153,8 @@ public abstract class GenericVideo {
 		palette[c] = rgb;
 	}
 
-	private void createDisplay(boolean record) {
-		screen = new BufferedImageScreen(width, height, record);
+	private void createDisplay() {
+		screen = new BufferedImageScreen(width, height);
 		if ((orientation & ORIENTATION_SWAP_XY) != 0) {
 			width  ^= height;
 			height ^= width;

@@ -35,6 +35,7 @@ public class Game {
 	private final String logFile = "results.txt";
 	
 	public Game (Machine machine) {
+
 		if(invincible) {
 			disableCollisions();			
 		}
@@ -284,9 +285,9 @@ public class Game {
 				e.printStackTrace();
 			}
 		}
-		if(++count  == 100) {
-			System.exit(0);
-		}
+//		if(++count  == 100) {
+//			System.exit(0);
+//		}
 	}
 
 
@@ -304,7 +305,7 @@ public class Game {
 			move = MOVE.LEFT;
 		}
 		if(move != null) {
-			machine.ioWrite(0, (char) move.portValue());
+			machine.portWrite(0, (char) move.portValue());
 		}
 	}
 	
@@ -347,7 +348,7 @@ public class Game {
 	}
 	
 	private synchronized void action(int port, int value) {
-		machine.ioWrite(port, (char) value);
+		machine.portWrite(port, (char) value);
 	}
 	
 	private String hexString(int value, int width) {
@@ -428,7 +429,7 @@ public class Game {
 	
 	/*
 	 * The the bonus doesn't have a variable for tile position like the others,
-	 * but it does suffer from the walk-through bug.  I'm not sure exactly how
+	 * but it does suffer from the walk-through bug.  i'm not sure exactly how
 	 * bonus collisions are detected, but this doesn't always work.
 	 */
 	public Point getBonusTilePosition() {

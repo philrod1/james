@@ -123,12 +123,12 @@ public class Pacman {
 		return 60;
 	}
 
-	public GenericVideo getVideo(boolean record) {
+	public GenericVideo getVideo() {
 		Pengo pengo = new Pengo(28 * 8, 36 * 8, false, 1, new Rectangle(0 * 8,
 				28 * 8 - 1, 0 * 8, 36 * 8 - 1), colourData, 16,
 				gfxDecodeInfo, videoram, new int[]{1024}, colourram,
 				spriteram, new int[]{16,0,0});
-		pengo.init(memoryRegions, record);
+		pengo.init(memoryRegions);
 		return pengo;
 	}
 

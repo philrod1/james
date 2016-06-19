@@ -23,9 +23,9 @@ public class FullMachine extends PartMachine {
 	private final Keyboard keyboard;
 	private final GenericVideo video;
 	
-	public FullMachine(Pacman pacman, boolean record) {
+	public FullMachine(Pacman pacman) {
 		super(pacman);
-		video = pacman.getVideo(record);
+		video = pacman.getVideo();
 		keyboard = new Keyboard(this);
 	}
 	

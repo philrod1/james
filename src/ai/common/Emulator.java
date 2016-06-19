@@ -5,7 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-import ai.common.MOVE;
 import ai.common.Game.GHOST;
 import emulator.games.Pacman;
 import emulator.machine.PartMachine;
@@ -56,7 +55,7 @@ public class Emulator {
 		if(move == null) {
 			return;
 		}
-		emulator.ioWrite(0, (char) move.portValue());
+		emulator.portWrite(0, (char) move.portValue());
 	}
 	
 	private Point getPacmanTile() {
@@ -178,7 +177,7 @@ public class Emulator {
 	}
 
 	public Point getBonusTilePosition() {
-			// I think bonus collisions may be pixel, not tile, based.
+			// i think bonus collisions may be pixel, not tile, based.
 			int bonus = emulator.memoryRead(0x4c0c);
 			if(bonus >= 0 && bonus < 7) {
 				return new Point(31-(emulator.memoryRead(0x4dd3)/8), emulator.memoryRead(0x4dd2)/8);
@@ -237,4 +236,38 @@ public class Emulator {
 		return emulator.memoryRead(0x4e04) == 0xd;
 	}
 
+	public MOVE oneStepCheck(MOVE move, Game game) {
+		List<MOVE> moves = game.pacman.getAvailableMoves();
+		if(move == null) return oneStepCheck(moves.get(rng .nextInt(moves.size())), game);
+		Snapshot snap = game.getSnapshot();
+		syncToSnapshot(snap);
+		setMove(move);
+		for(int i = 0 ; i < 8 ; i ++) {
+			emulator.step();
+			if(!isPacmanAlive()) {
+				syncToSnapshot(snap);
+				moves.remove(move);
+				while(!moves.isEmpty()) {
+					MOVE m2 = moves.remove(rng.nextInt(moves.size()));
+					if(isSafe(m2, 8, snap)) {
+						return m2;
+					}
+				}
+				return move.opposite();
+			}
+		}
+		return move;
+	}
+
+	private boolean isSafe(MOVE move, int steps, Snapshot snap) {
+		setMove(move);
+		for(int i = 0 ; i < steps ; i++) {
+			emulator.step();
+			if(!isPacmanAlive()) {
+				return false;
+			}
+		}
+		emulator.syncToSnapshot(snap);
+		return true;
+	}
 }

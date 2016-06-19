@@ -52,12 +52,12 @@ public class PartMachine implements Machine {
 	}
 
 	@Override
-	public void ioWrite(int port, char value) {
+	public void portWrite(int port, char value) {
 		io[port].value = value;
 	}
 
 	@Override
-	public char ioRead(int port) {
+	public char portRead(int port) {
 		return io[port].value;
 	}
 

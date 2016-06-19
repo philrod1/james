@@ -102,7 +102,7 @@ public class SimGame {
 
         if(maze.pillEaten(simPacman.tile)) {
 			// Really, Pacman pauses for one frame after eating a pill, but two
-			// frames gave much better results.  Better safe than sorry, I guess.
+			// frames gave much better results.  Better safe than sorry, i guess.
         	simPacman.pause(2);
         	ghostManager.pillEaten();
         	score += 10;
@@ -218,7 +218,10 @@ public class SimGame {
 	}
 
 	public void sync(Snapshot snapshot) {
-		char[] RAM = snapshot.RAM;
+		sync(snapshot.RAM);
+	}
+
+	public void sync(char[] RAM) {
 		for(int i = 0 ; i < 4 ; i++) {
 			ghosts[i].setPixelPosition(getGhostPixelPosition(RAM, i));
 			ghosts[i].setPreviousOrientation(RAM[0x4d28+i]);
@@ -401,4 +404,44 @@ public class SimGame {
 		return true;
 	}
 
+	public double rolloutSafe(Point target, int depth, Maze maze) {
+		if (depth==0) return 1;
+		simPacman.setTarget(target);
+		while(!simPacman.tile.equals(target)) {
+			if(!step()) {
+				return 0;
+			}
+			if(this.maze.pillCount == 0) {
+				return 1;
+			}
+		}
+		List<MOVE> moves = maze.getAvailableMoves(target);
+		moves.remove(simPacman.getCurrentMove().opposite());
+		Point target2 = maze.getNextCornerOrJunction(target, moves.get(rng.nextInt(moves.size())));
+		return rolloutSafe(target2, depth-1, maze);
+	}
+
+	public double rolloutGhostMunch(Point target, int depth, Maze maze) {
+		ghostsEaten = 0;
+		return rolloutGhostMunchPrivate(target, depth, maze);
+	}
+
+	private double rolloutGhostMunchPrivate(Point target, int depth, Maze maze) {
+		if (depth==0) {
+			return ghostsEaten;
+		}
+		simPacman.setTarget(target);
+		while(!simPacman.tile.equals(target)) {
+			if(!step()) {
+				return 0;
+			}
+			if(this.maze.pillCount == 0) {
+				return 0;
+			}
+		}
+		List<MOVE> moves = maze.getAvailableMoves(target);
+		moves.remove(simPacman.getCurrentMove().opposite());
+		Point target2 = maze.getNextCornerOrJunction(target, moves.get(rng.nextInt(moves.size())));
+		return rolloutGhostMunchPrivate(target2, depth-1, maze);
+	}
 }

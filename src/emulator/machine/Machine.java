@@ -5,8 +5,8 @@ public interface Machine {
 	void step();
 	int memoryRead(int address);
 	void memoryWrite(int address, int data);
-	void ioWrite(int port, char value);
-	char ioRead(int port);
+	void portWrite(int port, char value);
+	char portRead(int port);
 	Snapshot getSnapshot();
 	void syncToSnapshot(Snapshot snapshot);
 }

@@ -121,31 +121,31 @@ public class Keyboard implements KeyListener {
 		/*
 		 * Standard human controls
 		 */
-		machine.ioWrite(0, (char) 0xFF);
-		machine.ioWrite(1, (char) 0xFF);
+		machine.portWrite(0, (char) 0xFF);
+		machine.portWrite(1, (char) 0xFF);
 		
 		if (isKeyPressed(OSD_KEY_3)) {
-			machine.ioWrite(0, (char) (machine.ioRead(0) & 0xDF));
+			machine.portWrite(0, (char) (machine.portRead(0) & 0xDF));
 		}
 		
 		if (isKeyPressed(OSD_KEY_UP)) {
-			machine.ioWrite(0, (char) (machine.ioRead(0) & 0xFE));
+			machine.portWrite(0, (char) (machine.portRead(0) & 0xFE));
 		}
 		
 		if (isKeyPressed(OSD_KEY_LEFT)) {
-			machine.ioWrite(0, (char) (machine.ioRead(0) & 0xFD));
+			machine.portWrite(0, (char) (machine.portRead(0) & 0xFD));
 		}
 		
 		if (isKeyPressed(OSD_KEY_RIGHT)) {
-			machine.ioWrite(0, (char) (machine.ioRead(0) & 0xFB));
+			machine.portWrite(0, (char) (machine.portRead(0) & 0xFB));
 		}
 		
 		if (isKeyPressed(OSD_KEY_DOWN)) {
-			machine.ioWrite(0, (char) (machine.ioRead(0) & 0xF7));
+			machine.portWrite(0, (char) (machine.portRead(0) & 0xF7));
 		}
 		
 		if (isKeyPressed(OSD_KEY_1)) {
-			machine.ioWrite(1, (char) (machine.ioRead(1) & 0xDF));
+			machine.portWrite(1, (char) (machine.portRead(1) & 0xDF));
 		}
     }
 
