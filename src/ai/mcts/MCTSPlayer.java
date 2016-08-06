@@ -58,7 +58,7 @@ public class MCTSPlayer extends AbstractAI {
 			}
 
 			snap = emu.getSnapshot();
-			sim.sync(snap);
+			sim.syncToSnapshot(snap);
 			SimData data = new SimData(snap);
 
 			root = new TreeNodeSim(null, 1, sim, data);

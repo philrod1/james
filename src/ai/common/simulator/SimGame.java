@@ -217,7 +217,7 @@ public class SimGame {
 		return 0;
 	}
 
-	public void sync(Snapshot snapshot) {
+	public void syncToSnapshot(Snapshot snapshot) {
 		sync(snapshot.RAM);
 	}
 
@@ -385,7 +385,7 @@ public class SimGame {
 	}
 
 	public boolean advanceToTargetSimple(MOVE move, Point target, Snapshot snap) {
-		sync(snap);
+		syncToSnapshot(snap);
 		simPacman.setTarget(target);
 		while(!simPacman.tile.equals(target)) {
 			if(!step()) {
@@ -447,13 +447,14 @@ public class SimGame {
 
 	public MOVE oneStepCheck(MOVE move, Game game) {
 		Snapshot snap = game.getSnapshot();
-		sync(snap);
-		simPacman.setTarget(game.getMaze().getNextCornerOrJunction(game.pacman.getTilePosition(), move));
+		syncToSnapshot(snap);
+		Point target = game.getMaze().getNextCornerOrJunction(game.pacman.getTilePosition(), move);
+		simPacman.setTarget(target);
 		for(int i = 0 ; i < 8 ; i ++) {
 			if(!step()) {
-				sync(snap);
+				syncToSnapshot(snap);
 				List<MOVE> moves = game.pacman.getAvailableMoves();
-				moves.remove(move);
+//				moves.remove(move);
 				while(!moves.isEmpty()) {
 					MOVE m2 = moves.remove(rng.nextInt(moves.size()));
 					if(advanceToNextDecisionPoint(m2, game.getMaze())) {

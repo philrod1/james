@@ -12,7 +12,7 @@ import ai.common.MOVE;
 public class GhostDodger implements Voice {
 	
 	private final SimGame sim;
-	private final int maxPaths = 12;
+	private final int maxPaths = 8;
 	private final int maxDepth = 8;
 	
 	public GhostDodger(Game game) {

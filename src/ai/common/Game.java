@@ -31,7 +31,7 @@ public class Game {
 	private final int skipToLevel = 0;
 	
 	private boolean logScore = true;
-	private final String logFile = "withEmu.txt";
+	private final String logFile = "results.txt";
 	
 	public Game (Machine machine) {
 

@@ -153,14 +153,14 @@ public class Pengo extends GenericVideo {
 
 				drawgfx(
 						gfx[2 * gfxBank],
-						videoRam.read(offs), 
+						videoRam.read(offs),
 						colourRam.read(offs),
-						flipScreen, 
-						flipScreen, 
-						8 * sx, 
+						flipScreen,
+						flipScreen,
+						8 * sx,
 						8 * sy,
-						visibleArea, 
-						TRANSPARENCY_NONE, 
+						visibleArea,
+						TRANSPARENCY_NONE,
 						0
 					);
 			}

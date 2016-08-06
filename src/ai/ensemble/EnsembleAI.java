@@ -82,8 +82,9 @@ public class EnsembleAI extends AbstractAI {
 				}
 			}
 			MOVE move = game.getMaze().getMoveTowards(p, target);
-			emulator.syncToSnapshot(game.getSnapshot());
-			MOVE move2 = emulator.oneStepCheck(move, game);
+//			emulator.syncToSnapshot(game.getSnapshot());
+			sim.syncToSnapshot(game.getSnapshot());
+			MOVE move2 = sim.oneStepCheck(move, game);
 			if(move2 != move) {
 				target = null;
 				lastMove = move2;
