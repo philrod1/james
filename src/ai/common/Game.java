@@ -25,14 +25,13 @@ public class Game {
 	private int highLevel = 0;
 	
 	private final Machine machine;
-	private int count = 0;
 	
 	private final boolean invincible = false;
 	private final boolean infiniteLives = false;
 	private final int skipToLevel = 0;
 	
 	private boolean logScore = true;
-	private final String logFile = "results.txt";
+	private final String logFile = "withEmu.txt";
 	
 	public Game (Machine machine) {
 
@@ -133,9 +132,9 @@ public class Game {
 		return (machine.memoryRead(0x4dc0) * 8 + machine.memoryRead(0x4dc4));
 	}
 	
-	public int readMemory(int address) {
-		return machine.memoryRead(address);
-	}
+//	public int readMemory(int address) {
+//		return machine.memoryRead(address);
+//	}
 	
 	public int mazeID() {
 		return mazeID;
@@ -270,6 +269,7 @@ public class Game {
 			message("LEVEL " + highLevel);
 	}
 
+	private int count = 0;
 	private void log(String string) {
 		System.out.println("Logging " + string);
 		FileWriter log = null;
@@ -285,9 +285,9 @@ public class Game {
 				e.printStackTrace();
 			}
 		}
-//		if(++count  == 100) {
-//			System.exit(0);
-//		}
+		if(++count  == 50) {
+			System.exit(0);
+		}
 	}
 
 
@@ -321,23 +321,7 @@ public class Game {
 		action(1 ,223);
 	}
 	
-	private boolean paused = false;
-	
-	public synchronized void pause() {
-		if(lastState == STATE.PLAYING && !paused) {
-			machine.memoryWrite(0x4e04, 2);
-			paused = true;
-		}
-	}
-	
-	public synchronized void unpause() {
-		if(lastState == STATE.PLAYING && paused) {
-			machine.memoryWrite(0x4e04, 3);
-			paused = false;
-		}
-	}
-	
-	public synchronized void skipLevel() {
+	private synchronized void skipLevel() {
 		if(lastState == STATE.PLAYING) {
 			machine.memoryWrite(0x4e04, 0xc);
 			getState();
@@ -449,7 +433,15 @@ public class Game {
 		}
 		return null;
 	}
-	
+
+	public boolean isPill(int address) {
+		return machine.memoryRead(address) == 0x10;
+	}
+
+	public boolean isPowerPill(int address) {
+		return machine.memoryRead(address) == 0x14;
+	}
+
 	public final class PacMan {
 		
 		public Point getTilePosition() {
@@ -542,27 +534,6 @@ public class Game {
 			return maze.getAllDistances(pacman.getTilePosition(), p);
 		}
 		
-		public int distanceToNearestPillAStar(MOVE move) {
-			Point pac = pacman.getTilePosition();
-			Node pacNode = maze.getNode(pac);
-			int shortestDistance = 100000;
-			List<MOVE> blocked = null;
-			try {
-				blocked = pacNode.blockAllExcept(move);
-				List<Point> pills = getPillPositions(); // Cache?
-				for(Point pill : pills) {
-					int d = maze.aStarDistance(pac, pill);
-					if(d < shortestDistance) {
-						shortestDistance = d;
-					}
-				}
-			} catch (Exception e) {
-				shortestDistance = 0;
-			} finally {
-				pacNode.unblockAll(blocked);
-			}
-			return shortestDistance;
-		}
 		public double distanceToNearestFruit(MOVE move) {
 			try {
 				if(getCurrentBonus() != null) {
@@ -590,7 +561,7 @@ public class Game {
 		return pills;
 	}
 	
-	public static enum BONUS {
+	public enum BONUS {
 		CHERRY 		{ public int points() { return 100;  }},
 		STRAWBERRY 	{ public int points() { return 200;  }},
 		ORANGE 		{ public int points() { return 500;  }},
@@ -604,7 +575,7 @@ public class Game {
 	public enum GHOST {
 		BLINKY, PINKY, INKY, SUE;
 	}
-	public static enum STATE {
+	public enum STATE {
 		BOOTING, TESTING, DEMO, COIN_IN, START_PRESSED, GET_READY, KILLED,
 		PLAYING, PAUSED, LEVEL_COMPLETE, CUT_SCENE, GAME_OVER, OFF, LEVEL_SKIP, UNKNOWN;
 	}

@@ -444,4 +444,26 @@ public class SimGame {
 		Point target2 = maze.getNextCornerOrJunction(target, moves.get(rng.nextInt(moves.size())));
 		return rolloutGhostMunchPrivate(target2, depth-1, maze);
 	}
+
+	public MOVE oneStepCheck(MOVE move, Game game) {
+		Snapshot snap = game.getSnapshot();
+		sync(snap);
+		simPacman.setTarget(game.getMaze().getNextCornerOrJunction(game.pacman.getTilePosition(), move));
+		for(int i = 0 ; i < 8 ; i ++) {
+			if(!step()) {
+				sync(snap);
+				List<MOVE> moves = game.pacman.getAvailableMoves();
+				moves.remove(move);
+				while(!moves.isEmpty()) {
+					MOVE m2 = moves.remove(rng.nextInt(moves.size()));
+					if(advanceToNextDecisionPoint(m2, game.getMaze())) {
+						return m2;
+					}
+				}
+				return move.opposite();
+			}
+		}
+		return move;
+	}
+
 }

@@ -46,7 +46,7 @@ public class Controller {
 		};
 
 		final Timer timer = new Timer();
-		timer.scheduleAtFixedRate(task, 0, (int)((1000/machine.getFPS())*1/gameSpeed));
+		timer.scheduleAtFixedRate(task, 0, (int)(1000/machine.getFPS() * 1/gameSpeed ));
 		
 		final Thread aiThread = new Thread(ai);
 		aiThread.start();

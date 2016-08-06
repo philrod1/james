@@ -155,23 +155,11 @@ public class Node implements Serializable {
 	}
 	
 	public boolean hasPill(Game game) {
-		return game.readMemory(spriteRAM) == 0x10;
+		return game.isPill(spriteRAM);
 	}
 
 	public boolean hasPowerPill(Game game) {
-		return game.readMemory(spriteRAM) == 0x14;
-	}
-	
-	public boolean hasPill(char[] RAM) {
-		return RAM[spriteRAM] == 0x10;
-	}
-
-	public boolean hasPowerPill(char[] RAM) {
-		return RAM[spriteRAM] == 0x14;
-	}
-	
-	public boolean isSlowTileForGhosts(Game game) {
-		return game.readMemory(colourRAM) == 0x5d;
+		return game.isPowerPill(spriteRAM);
 	}
 
 	@Override
