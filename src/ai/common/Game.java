@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
+import emulator.machine.FullMachine;
 import emulator.machine.Machine;
 import emulator.machine.Snapshot;
 
@@ -24,14 +25,14 @@ public class Game {
 	private int level = 0;
 	private int highLevel = 0;
 	
-	private final Machine machine;
+	private Machine machine;
 	
 	private final boolean invincible = false;
 	private final boolean infiniteLives = false;
 	private final int skipToLevel = 0;
 	
-	private boolean logScore = true;
-	private final String logFile = "results.txt";
+	private boolean logScore = false;
+	private final String logFile = "level1.txt";
 	
 	public Game (Machine machine) {
 
@@ -270,7 +271,7 @@ public class Game {
 	}
 
 	private int count = 0;
-	private void log(String string) {
+	public void log(String string) {
 		System.out.println("Logging " + string);
 		FileWriter log = null;
 		try {
@@ -285,7 +286,7 @@ public class Game {
 				e.printStackTrace();
 			}
 		}
-		if(++count  == 50) {
+		if(++count  == 100) {
 			System.exit(0);
 		}
 	}
@@ -440,6 +441,10 @@ public class Game {
 
 	public boolean isPowerPill(int address) {
 		return machine.memoryRead(address) == 0x14;
+	}
+
+	public void setMachine(FullMachine machine) {
+		this.machine = machine;
 	}
 
 	public final class PacMan {

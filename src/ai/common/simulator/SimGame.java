@@ -36,6 +36,8 @@ public class SimGame {
 	private int ghostsEaten = 0;
 	private int score;
 
+	private int pause = 1;
+
 	private final Random rng = new Random();
 	
 	public SimGame(Game game) {
@@ -103,7 +105,8 @@ public class SimGame {
         if(maze.pillEaten(simPacman.tile)) {
 			// Really, Pacman pauses for one frame after eating a pill, but two
 			// frames gave much better results.  Better safe than sorry, i guess.
-        	simPacman.pause(2);
+        	simPacman.pause(pause + 1);
+			pause = (pause + 1) % 2;
         	ghostManager.pillEaten();
         	score += 10;
         }

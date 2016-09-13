@@ -23,17 +23,22 @@ public class Controller {
 		new Controller();
 	}
 
+	FullMachine machine;
+	JFrame frame;
+	Game game;
+	int count = 0;
+
 	public Controller() {
-		final FullMachine machine = new FullMachine(new Pacman());
-		final JFrame frame = new JFrame("Ms. Pac-Man");
+		machine = new FullMachine(new Pacman());
+		frame = new JFrame("Ms. Pac-Man");
 		frame.setBounds(1, 1, width, height);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(machine.getScreen());
-		frame.addKeyListener(machine.getKeyboard());
+//		frame.addKeyListener(machine.getKeyboard());
 		frame.pack();
 		frame.setVisible(true);
 		
-		final Game game = new Game(machine);
+		game = new Game(machine);
 
 		final AI ai = new EnsembleAI(game);
 
@@ -41,6 +46,29 @@ public class Controller {
 			@Override
 			public void run() {
 				game.update();
+				if (game.getState() == Game.STATE.LEVEL_COMPLETE) {
+					game.log("1 1");
+					machine = new FullMachine(new Pacman());
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(machine.getScreen());
+					frame.pack();
+					game.setMachine(machine);
+					if (++count == 100) {
+						System.exit(1);
+					}
+					return;
+				} else if (game.getState() == Game.STATE.PLAYING && machine.memoryRead(0x4da5) > 0) {
+					game.log("1 0");
+					machine = new FullMachine(new Pacman());
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(machine.getScreen());
+					frame.pack();
+					game.setMachine(machine);
+					if (++count == 100) {
+						System.exit(1);
+					}
+					return;
+				}
 				machine.step();
 			}
 		};
@@ -52,7 +80,5 @@ public class Controller {
 		aiThread.start();
 		
 	}
-
-
 	
 }
