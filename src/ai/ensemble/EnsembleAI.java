@@ -17,30 +17,37 @@ import emulator.machine.Snapshot;
 
 public class EnsembleAI extends AbstractAI {
 	
-	public final static Emulator emulator = new Emulator(new Pacman());
-	private final SimGame sim;
+	public final static Emulator emu = new Emulator(new Pacman());
+//	private final SimGame sim;
 	
 	private final Voice pillMuncher;
 	private final Voice ghostDodger;
+	private final Voice ghostDodger2;
 	private final Voice fruitMuncher;
 	private final Voice ghostMuncher;
 	
 	private MOVE lastMove = MOVE.LEFT;
 	private Point target = null;
 	
-	private double[] weights = new double[]{1,0.02,0.1,1,0.01};
+	private double[] weights = new double[]{
+			1.0,    // Ghost Dodger
+            0.1,   // Pill Muncher
+            0.0,    // Fruit Muncher
+            1.0     // Ghost Muncher
+	};
 
 	private final Random rng = new Random();
 
 	private char ghostCounter;
 
 	public EnsembleAI (Game game) {
-		sim = new SimGame(game);
+//		sim = new SimGame(game);
 		this.game = game;
 		pillMuncher = new PillMuncher();
 		ghostDodger = new GhostDodger(game);
+		ghostDodger2 = new RulesGhostDodger();
 		fruitMuncher = new FruitMuncher();
-		ghostMuncher = new GhostMuncher(game);
+		ghostMuncher = new GhostMuncher();
 	}
 
 	protected MOVE play() {
@@ -64,12 +71,18 @@ public class EnsembleAI extends AbstractAI {
 			List<MOVE> safe = new LinkedList<>();
 			for(MOVE move : game.pacman.getAvailableMoves()) {
 				Point t = maze.getNextCornerOrJunction(p, move);
-				if(sim.advanceToTargetSimple(move, t, snap)) {
+				if(emu.advanceToTargetSimple(move, t, snap)) {
 					safe.add(move);
 				}
 			}
 			if((p.equals(target) || chomp) && safe.size() > 0) {
-				double[] combinedPreferences = combine( 
+//				double[] gd2 = ghostDodger2.getPreferences(game, safe);
+//				double[] gd1 = ghostDodger.getPreferences(game, safe);
+//				for (MOVE move : safe) {
+//					System.out.println(move + "\tG1: " + gd1[move.ordinal()] + "\tG2: " + gd2[move.ordinal()]);
+//				}
+//				System.out.println();
+				double[] combinedPreferences = combine(
 						ghostDodger.getPreferences(game, safe),
 						pillMuncher.getPreferences(game, safe), 
 						fruitMuncher.getPreferences(game, safe),
@@ -82,9 +95,9 @@ public class EnsembleAI extends AbstractAI {
 				}
 			}
 			MOVE move = game.getMaze().getMoveTowards(p, target);
-//			emulator.syncToSnapshot(game.getSnapshot());
-			sim.syncToSnapshot(game.getSnapshot());
-			MOVE move2 = sim.oneStepCheck(move, game);
+			emu.syncToSnapshot(game.getSnapshot());
+//			sim.syncToSnapshot(game.getSnapshot());
+			MOVE move2 = emu.oneStepCheck(move, game);
 			if(move2 != move) {
 				target = null;
 				lastMove = move2;

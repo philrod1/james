@@ -22,8 +22,8 @@ public class PartMachine implements Machine {
 		rng = new Random();
 		memory = pacman.getMemory();
 		/* more random */
-		memory[0x4dc9] = (char) rng.nextInt(0x10000);
-		memory[0x4dca] = (char) rng.nextInt(0x10000);
+		memory[0x4dc9] = (char) rng.nextInt(0x5000);
+		memory[0x4dca] = (char) rng.nextInt(0x5000);
 		io = pacman.getIO();
 		cycles = pacman.getClock() / pacman.getFPS();
 	}

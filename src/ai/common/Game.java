@@ -4,6 +4,7 @@ import java.awt.Point;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -31,8 +32,11 @@ public class Game {
 	private final int skipToLevel = 0;
 	
 	private boolean logScore = true;
-	private final String logFile = "results.txt";
-	
+//	private final String logFile = "MCTS_best.txt";
+//	private final String logFile = "Ensemble_best.txt";
+	private final String logFile = "Ensemble_no_fruit.txt";
+//	private final String logFile = "Ensmble_no_fruit_no_emu.txt";
+
 	public Game (Machine machine) {
 
 		if(invincible) {
@@ -235,7 +239,7 @@ public class Game {
 					} else if (e04 == 7) {
 						lastState = STATE.GAME_OVER;
 						if(logScore) {
-							log(level + " " + getScore());
+							log(level + " " + getScore() + " " + new Date());
 							level = 0;
 							logScore = false;
 						}
@@ -285,7 +289,7 @@ public class Game {
 				e.printStackTrace();
 			}
 		}
-		if(++count  == 50) {
+		if(++count == 100) {
 			System.exit(0);
 		}
 	}
@@ -549,16 +553,15 @@ public class Game {
 	}
 	
 	public List<Point> getPillPositions() {
-		List<Point> pills = new LinkedList<Point>();
-		for (int x = 0 ; x < WIDTH ; x++) {
-			for (int y = 0 ; y < HEIGHT ; y++) {
-				Node node = maze.getNode(x, y);
-				if (node != null && (node.hasPill(this) || node.hasPowerPill(this))) {
-					pills.add(node.getPosition());
-				}
-			}
-		}
-		return pills;
+		return maze.getPillPositions(this);
+	}
+
+	public List<Point> getNormalPillPositions() {
+		return maze.getNormalPillPositions(this);
+	}
+
+	public List<Point> getPowerPillPositions() {
+		return maze.getPowerPillPositions(this);
 	}
 	
 	public enum BONUS {

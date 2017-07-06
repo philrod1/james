@@ -26,7 +26,6 @@ public class Maze {
 	private int[][] dist;
 	private Map<Node, Map<Node, MoveDistance>> distances;
 	private Map<Point, Map<Point, int[]>> allDistances;
-//	public Map<Integer, Map<Integer, Integer>> pixelDist;
 	public final int mazeId;
 
 	@SuppressWarnings("unchecked")
@@ -180,9 +179,12 @@ public class Maze {
 		try {
 			Map<Point, int[]> start = allDistances.get(p);
 			int[] dest = start.get(t);
+			if (dest == null) {
+				return 0;
+			}
 			return dest[move.ordinal()];
 		} catch (Exception e) {
-			System.out.println(p + " " + move + " ----- " + t);
+			System.out.println(p + " " + move + " ----- " + t + " " + mazeId);
 			e.printStackTrace();
 			return 100000;
 		}
@@ -242,6 +244,32 @@ public class Maze {
 			for (int y = 0 ; y < HEIGHT ; y++) {
 				Node node = graph[x][y];
 				if (node != null && (node.hasPill(game) || node.hasPowerPill(game))) {
+					pills.add(node.getPosition());
+				}
+			}
+		}
+		return pills;
+	}
+
+	public List<Point> getNormalPillPositions(Game game) {
+		List<Point> pills = new LinkedList<Point>();
+		for (int x = 0 ; x < WIDTH ; x++) {
+			for (int y = 0 ; y < HEIGHT ; y++) {
+				Node node = graph[x][y];
+				if (node != null && node.hasPill(game)) {
+					pills.add(node.getPosition());
+				}
+			}
+		}
+		return pills;
+	}
+
+	public List<Point> getPowerPillPositions(Game game) {
+		List<Point> pills = new LinkedList<Point>();
+		for (int x = 0 ; x < WIDTH ; x++) {
+			for (int y = 0 ; y < HEIGHT ; y++) {
+				Node node = graph[x][y];
+				if (node != null && node.hasPowerPill(game)) {
 					pills.add(node.getPosition());
 				}
 			}

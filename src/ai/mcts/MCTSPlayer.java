@@ -38,8 +38,10 @@ public class MCTSPlayer extends AbstractAI {
 			Snapshot snap = game.getSnapshot();
 			emu.syncToSnapshot(snap);
 			int result = emu.advanceToTarget(target, game.getMaze());
+//			System.out.println(result);
 
 			if(result < 0) {
+//				System.out.println("Check");
 				List<MOVE> moves = pacman.getAvailableMoves();
 				for(MOVE m : moves) {
 					emu.syncToSnapshot(snap);
@@ -60,10 +62,11 @@ public class MCTSPlayer extends AbstractAI {
 			snap = emu.getSnapshot();
 			sim.syncToSnapshot(snap);
 			SimData data = new SimData(snap);
+//			SimData data = sim.getSimData();
 
 			root = new TreeNodeSim(null, 1, sim, data);
 			root.maxDepth = 0;
-			TreeNodeSim.score = emu.getScore();
+			TreeNodeSim.score = game.getScore();
 			root.expand(game.getMaze().getAvailableMoves(target));
 
 			while (!pacman.getTilePosition().equals(target)) {
@@ -78,7 +81,7 @@ public class MCTSPlayer extends AbstractAI {
 			MOVE bestMove = null;
 			for (TreeNodeSim child : root.children) {
 				double value = child.reward / child.nVisits;
-				System.out.println(child.move + " : " + value + " (" + child.nVisits + ") " + child.getMaxDepth());
+//				System.out.println(child.move + " : " + value + " (" + child.nVisits + ") " + child.getMaxDepth());
 				if (value > bestValue) {
 					bestValue = value;
 					bestMove = child.move;
@@ -90,9 +93,9 @@ public class MCTSPlayer extends AbstractAI {
 				move = moves.get(rng.nextInt(moves.size()));
 				return move;
 			}
-			target = game.getMaze().getNextCornerOrJunction(target, bestMove);
-			System.out.println("Going " + bestMove + " to " + target);
-			System.out.println("----------------------------------------------");
+			target = game.getMaze().getNextTile(target, bestMove);
+//			System.out.println("Going " + bestMove + " to " + target);
+//			System.out.println("----------------------------------------------");
 			move = bestMove;
 		} catch (NullPointerException e) {
 			e.printStackTrace();
