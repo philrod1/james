@@ -18,7 +18,7 @@ import emulator.machine.Snapshot;
 public class EnsembleAI extends AbstractAI {
 	
 	public final static Emulator emulator = new Emulator(new Pacman());
-	private final SimGame sim;
+//	private final SimGame sim;
 	
 	private final Voice pillMuncher;
 	private final Voice ghostDodger;
@@ -28,14 +28,19 @@ public class EnsembleAI extends AbstractAI {
 	private MOVE lastMove = MOVE.LEFT;
 	private Point target = null;
 	
-	private double[] weights = new double[]{1,0.02,0.1,1,0.01};
+	private double[] weights = new double[]{
+			1.0,    // Ghost Dodger
+            0.01,   // Pill Muncher
+            0.1,    // Fruit Muncher
+            1.0     // Ghost Muncher
+	};
 
 	private final Random rng = new Random();
 
 	private char ghostCounter;
 
 	public EnsembleAI (Game game) {
-		sim = new SimGame(game);
+//		sim = new SimGame(game);
 		this.game = game;
 		pillMuncher = new PillMuncher();
 		ghostDodger = new GhostDodger(game);
@@ -64,7 +69,7 @@ public class EnsembleAI extends AbstractAI {
 			List<MOVE> safe = new LinkedList<>();
 			for(MOVE move : game.pacman.getAvailableMoves()) {
 				Point t = maze.getNextCornerOrJunction(p, move);
-				if(sim.advanceToTargetSimple(move, t, snap)) {
+				if(emulator.advanceToTargetSimple(move, t, snap)) {
 					safe.add(move);
 				}
 			}
@@ -82,9 +87,9 @@ public class EnsembleAI extends AbstractAI {
 				}
 			}
 			MOVE move = game.getMaze().getMoveTowards(p, target);
-//			emulator.syncToSnapshot(game.getSnapshot());
-			sim.syncToSnapshot(game.getSnapshot());
-			MOVE move2 = sim.oneStepCheck(move, game);
+			emulator.syncToSnapshot(game.getSnapshot());
+//			sim.syncToSnapshot(game.getSnapshot());
+			MOVE move2 = emulator.oneStepCheck(move, game);
 			if(move2 != move) {
 				target = null;
 				lastMove = move2;

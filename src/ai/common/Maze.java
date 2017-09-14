@@ -249,6 +249,32 @@ public class Maze {
 		return pills;
 	}
 
+	public List<Point> getNormalPillPositions(Game game) {
+		List<Point> pills = new LinkedList<Point>();
+		for (int x = 0 ; x < WIDTH ; x++) {
+			for (int y = 0 ; y < HEIGHT ; y++) {
+				Node node = graph[x][y];
+				if (node != null && node.hasPill(game)) {
+					pills.add(node.getPosition());
+				}
+			}
+		}
+		return pills;
+	}
+
+	public List<Point> getPowerPillPositions(Game game) {
+		List<Point> pills = new LinkedList<Point>();
+		for (int x = 0 ; x < WIDTH ; x++) {
+			for (int y = 0 ; y < HEIGHT ; y++) {
+				Node node = graph[x][y];
+				if (node != null && node.hasPowerPill(game)) {
+					pills.add(node.getPosition());
+				}
+			}
+		}
+		return pills;
+	}
+
 	public boolean isIntersection(Point tile) {
 		try {
 			Node node = graph[tile.x][tile.y];

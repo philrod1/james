@@ -7,6 +7,7 @@ import java.util.Random;
 import ai.AbstractAI;
 import ai.common.simulator.SimGame;
 import ai.common.simulator.data.SimData;
+import ai.ensemble.FruitMuncher;
 import emulator.games.Pacman;
 import emulator.machine.Snapshot;
 import ai.common.Game;
@@ -17,18 +18,21 @@ import ai.common.Emulator;
 
 public class MCTSPlayer extends AbstractAI {
 
-	private final Emulator emu = new Emulator(new Pacman());
+ 	private final Emulator emu = new Emulator(new Pacman());
 	private PacMan pacman;
 	private Point target;
 	private final Random rng = new Random();
 	private TreeNodeSim root;
 	private MOVE move = MOVE.LEFT;
 	private SimGame sim;
+	
+	private final FruitMuncher fm;
 
 	public MCTSPlayer(Game game) {
 		this.game = game;
 		pacman = game.pacman;
 		sim = new SimGame(game);
+		fm = new FruitMuncher();
 	}
 
 	protected synchronized MOVE play() {
@@ -46,8 +50,7 @@ public class MCTSPlayer extends AbstractAI {
 					Point next = game.getMaze().getNextTile(pacmanTile, m);
 					if(next == null) {
 						System.out.println("NULL next :-( " + m);
-					}
-					if(emu.advanceToTarget(next, game.getMaze()) >= 0) {
+					} else if(emu.advanceToTarget(next, game.getMaze()) >= 0) {
 						move = m;
 						target = next;
 						return move;
@@ -64,7 +67,8 @@ public class MCTSPlayer extends AbstractAI {
 			root = new TreeNodeSim(null, 1, sim, data);
 			root.maxDepth = 0;
 			TreeNodeSim.score = emu.getScore();
-			root.expand(game.getMaze().getAvailableMoves(target));
+			List<MOVE> availableMoves = game.getMaze().getAvailableMoves(target);
+			root.expand(availableMoves);
 
 			while (!pacman.getTilePosition().equals(target)) {
 				root.selectAction(game.getMaze(), data);
@@ -73,11 +77,13 @@ public class MCTSPlayer extends AbstractAI {
 					return move;
 				}
 			}
-
+			double[] fruitPrefs = fm.getPreferences(game, availableMoves);
 			double bestValue = Double.NEGATIVE_INFINITY;
 			MOVE bestMove = null;
 			for (TreeNodeSim child : root.children) {
-				double value = child.reward / child.nVisits;
+				double fpm = fruitPrefs[child.move.ordinal()] * 100;
+				fpm *= fpm;
+				double value = (child.reward / child.nVisits) * (1 + fpm);
 				System.out.println(child.move + " : " + value + " (" + child.nVisits + ") " + child.getMaxDepth());
 				if (value > bestValue) {
 					bestValue = value;

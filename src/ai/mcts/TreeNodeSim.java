@@ -41,17 +41,20 @@ public class TreeNodeSim {
 
 		current.pacmanAlive = true;
 
-		while (!current.isLeaf() && current.pacmanAlive) {
+		while (!current.isLeaf() && current.pacmanAlive && sim.getPillCount() > 0) {
 			current = current.select();
-			current.pacmanAlive = sim.advanceToNextDecisionPoint(current.move, maze);
+			current.pacmanAlive = sim.advanceToNextTile(current.move, maze);
 			visited.add(current);
 		}
 
 		if (sim.getPillCount() ==  0) {
-			reward = 1000;
+			reward += 1000;
 		} else
 		if (!current.pacmanAlive) {
 			reward /= 10;
+			if (Double.isNaN(reward)) {
+				reward = 0.00001;
+			}
 		} else {
 			current.expand();
 			if(current.children == null) {
@@ -69,6 +72,7 @@ public class TreeNodeSim {
 	private void expand() {
 		List<MOVE> moves = pacmanAvailableMoves(sim);
 		if (moves == null) return;
+		moves.remove(sim.simPacman.getCurrentMove().opposite());
 		children = new TreeNodeSim[moves.size()];
 		if (moves.size() == 0) {
 			System.out.println("Error expanding " + moves.size() + " children.");
@@ -120,7 +124,7 @@ public class TreeNodeSim {
 
 	private double rollOut() {
 		int result = sim.getScore() - score;
-		return result * result;
+		return result * result / 2;
 	}
 
 	private void updateStats(double reward) {

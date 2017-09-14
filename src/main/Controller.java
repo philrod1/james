@@ -1,6 +1,5 @@
 package main;
 
-import java.awt.*;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -16,7 +15,7 @@ import emulator.machine.FullMachine;
 public class Controller {
 
 	private final double gameSpeed = 1.0;
-	
+
 	private final int width = 224 * 2, height = 288 * 2;
 
 	public static void main(String[] args) {
@@ -35,9 +34,10 @@ public class Controller {
 		
 		final Game game = new Game(machine);
 
-		final AI ai = new EnsembleAI(game);
+//		final AI ai = new EnsembleAI(game);
+		final AI ai = new MCTSPlayer(game);
 
-		final TimerTask task = new TimerTask() {	
+		final TimerTask task = new TimerTask() {
 			@Override
 			public void run() {
 				game.update();

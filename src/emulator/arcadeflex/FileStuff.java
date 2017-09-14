@@ -12,7 +12,7 @@ public class FileStuff {
 	public RandomAccessFile raf;
 	public FileOutputStream fos;
 	public FileWriter fw;
-	public InputStream is;
+//	public InputStream is;
 	public String Name;
 
 	public static FileStuff fopen(char[] name, String format) {
@@ -59,20 +59,19 @@ public class FileStuff {
 	public void close() {
 		try {
 			raf.close();
-			is.close();
+//			is.close();
 			fos.close();
 			fw.close();
 		} catch (Exception e) {
 		}
 	}
 	
-	public static int fread(char[] buf, int offset, int size, int count,	FileStuff file) {
+	public static int fread(char[] buf, int offset, int size, int count, FileStuff file) {
 		byte bbuf[] = new byte[size * count];
 		int readsize;
 
 		try {
 			readsize = file.raf.read(bbuf);
-//			System.out.println("FileStuff.fread() - Readsize = " + readsize);
 		} catch (Exception e) {
 			e.printStackTrace();
 			bbuf = null;
@@ -153,8 +152,7 @@ public class FileStuff {
 			String name;
 
 			if (romp[_ptr].name != null || romp[_ptr].length != 0) {
-				System.out.println(
-						"Error in RomModule definition: expecting ROM_REGION");
+				System.out.println("Error in RomModule definition: expecting ROM_REGION");
 				return null;
 			}
 

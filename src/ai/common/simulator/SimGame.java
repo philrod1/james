@@ -103,7 +103,7 @@ public class SimGame {
         if(maze.pillEaten(simPacman.tile)) {
 			// Really, Pacman pauses for one frame after eating a pill, but two
 			// frames gave much better results.  Better safe than sorry, i guess.
-        	simPacman.pause(2);
+        	simPacman.pause(1);
         	ghostManager.pillEaten();
         	score += 10;
         }
@@ -376,6 +376,11 @@ public class SimGame {
 		return advanceToNextDecisionPoint(target, maze);
 	}
 
+	public boolean advanceToNextTile(MOVE move, Maze maze) {
+		Point target = maze.getNextTile(simPacman.tile, move);
+		return advanceToNextDecisionPoint(target, maze);
+	}
+
 	public int getPillCount() {
 		return maze.pillCount;
 	}
@@ -402,6 +407,31 @@ public class SimGame {
 			return false;
 		}
 		return true;
+	}
+
+	public int advanceToTarget(Point target, Maze maze) {
+		try {
+			Point pacman = simPacman.tile;
+			while(!pacman.equals(target)) {
+				MOVE move = maze.getMoveTowards(pacman, target);
+				if(move == null) {
+					return -1;
+				}
+				simPacman.setCurrentMove(move);
+				step();
+				if(getPillCount() == 0) {  // Maze complete
+					return 1;
+				}
+				if(!simPacman.isAlive()) {  // Dead
+					return -1;
+				}
+				pacman = simPacman.tile;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		}
+		return 0;
 	}
 
 	public double rolloutSafe(Point target, int depth, Maze maze) {
@@ -467,4 +497,7 @@ public class SimGame {
 		return move;
 	}
 
+	public SimData getSimData() {
+		return new SimData(this);
+	}
 }
