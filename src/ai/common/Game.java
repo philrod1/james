@@ -33,7 +33,7 @@ public class Game {
 	
 	private boolean logScore = true;
 //	private final String logFile = "MCTS_no_emu.txt";
-	private final String logFile = "MCTS_fruit.txt";
+	private final String logFile = "MCTS2_fruit.txt";
 
 	public Game (Machine machine) {
 

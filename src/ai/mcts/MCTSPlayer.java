@@ -42,8 +42,13 @@ public class MCTSPlayer extends AbstractAI {
 			Snapshot snap = game.getSnapshot();
 			emu.syncToSnapshot(snap);
 			int result = emu.advanceToTarget(target, game.getMaze());
-
-			if(result < 0) {
+			if (result >= 0) {
+				emu.step();
+				if (!emu.isPacmanAlive()) {
+					result = -1;
+				}
+			}
+			if (result < 0) {
 				List<MOVE> moves = pacman.getAvailableMoves();
 				for(MOVE m : moves) {
 					emu.syncToSnapshot(snap);
@@ -82,7 +87,9 @@ public class MCTSPlayer extends AbstractAI {
 			MOVE bestMove = null;
 			for (TreeNodeSim child : root.children) {
 				double fpm = fruitPrefs[child.move.ordinal()] * 100;
-				fpm *= fpm;
+//				fpm *= fpm * 0;
+				
+				
 				double value = (child.reward / child.nVisits) * (1 + fpm);
 				System.out.println(child.move + " : " + value + " (" + child.nVisits + ") " + child.getMaxDepth());
 				if (value > bestValue) {

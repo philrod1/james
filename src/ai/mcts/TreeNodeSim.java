@@ -124,7 +124,7 @@ public class TreeNodeSim {
 
 	private double rollOut() {
 		int result = sim.getScore() - score;
-		return result * result / 2;
+		return result * result;
 	}
 
 	private void updateStats(double reward) {
