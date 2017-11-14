@@ -13,7 +13,7 @@ public class PillMuncher implements Voice {
 	private final static double EPSILON = 1e-3;
 
 	@Override
-	public double[] getPreferences(Game game, List<MOVE> moves) {
+	public double[] getPreferences(Game game, List<MOVE> moves, boolean turbo) {
 		double[] results = new double[4];
 		for(MOVE move : moves) {
 			Point p = game.pacman.getTilePosition();

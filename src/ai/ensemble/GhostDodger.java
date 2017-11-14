@@ -15,12 +15,12 @@ public class GhostDodger implements Voice {
 	private final int maxPaths = 8;
 	private final int maxDepth = 8;
 	
-	public GhostDodger(Game game) {
-		sim = new SimGame(game);
+	public GhostDodger(Game game, boolean turbo) {
+		sim = new SimGame(game, turbo);
 	}
 
 	@Override
-	public double[] getPreferences(Game game, List<MOVE> moves) {
+	public double[] getPreferences(Game game, List<MOVE> moves, boolean turbo) {
 		
 		if(game.pacman.isEnergised()) {
 			return new double[]{1,1,1,1};

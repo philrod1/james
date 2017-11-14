@@ -25,10 +25,10 @@ public class MCTSPlayer extends AbstractAI {
 	private MOVE move = MOVE.LEFT;
 	private SimGame sim;
 
-	public MCTSPlayer(Game game) {
+	public MCTSPlayer(Game game, boolean turbo) {
 		this.game = game;
 		pacman = game.pacman;
-		sim = new SimGame(game);
+		sim = new SimGame(game, turbo);
 	}
 
 	protected synchronized MOVE play() {

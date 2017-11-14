@@ -11,6 +11,7 @@ public class SimPacman {
 			0b10101010101010101010101010101010,
 			0b11010101011010101101010101101010
 	};
+	private final boolean turbo;
 	public Point pixel = new Point(127,196), tile = new Point(15,24);
 	private boolean isEnergised = false;
 	private MOVE move = MOVE.LEFT;
@@ -21,7 +22,8 @@ public class SimPacman {
 	private final Game game;
 	private boolean isAlive;
 	
-	public SimPacman(Game game) {
+	public SimPacman(Game game, boolean turbo) {
+		this.turbo = turbo;
 		this.game = game;
 	}
 	
@@ -96,6 +98,9 @@ public class SimPacman {
 	}
 	
 	private int getSteps() {
+		if (turbo) {
+			return 2;
+		}
 		int index = isEnergised ? 1 : 0;
 		int p = stepPatterns[index];
 		int val = p & 3;

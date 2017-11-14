@@ -14,7 +14,7 @@ public class FruitMuncher implements Voice {
 	private final double epsilon = 1e-6;
 
 	@Override
-	public double[] getPreferences(Game game, List<MOVE> moves) {
+	public double[] getPreferences(Game game, List<MOVE> moves, boolean turbo) {
 		double[] prefs = new double[4];
 		BONUS bonus = game.getCurrentBonus();
 		if(bonus != null) {

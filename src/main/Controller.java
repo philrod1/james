@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 import ai.AI;
 import ai.common.Game;
@@ -15,28 +15,29 @@ import emulator.machine.FullMachine;
 
 public class Controller {
 
-	private final double gameSpeed = 1.0;
-
-	private final int width = 224 * 2, height = 288 * 2;
-
 	public static void main(String[] args) {
 		new Controller();
 	}
 
 	public Controller() {
+		double gameSpeed = 1.0;
+		int width = 224 * 2, height = 288 * 2;
 		final FullMachine machine = new FullMachine(new Pacman());
 		final JFrame frame = new JFrame("Ms. Pac-Man");
 		frame.setBounds(1, 1, width, height);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame.getContentPane().add(machine.getScreen());
 		frame.addKeyListener(machine.getKeyboard());
 		frame.pack();
 		frame.setVisible(true);
-		
-		final Game game = new Game(machine);
 
-		final AI ai = new EnsembleAI(game);
-//		final AI ai = new MCTSPlayer(game);
+		boolean invincible = false;
+		boolean turbo = false;
+
+		final Game game = new Game(machine, invincible, turbo);
+
+		final AI ai = new EnsembleAI(game, turbo);
+//		final AI ai = new MCTSPlayer(game, turbo);
 
 		final TimerTask task = new TimerTask() {
 			@Override

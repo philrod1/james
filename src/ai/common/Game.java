@@ -26,26 +26,29 @@ public class Game {
 	private int highLevel = 0;
 	
 	private final Machine machine;
-	
-	private final boolean invincible = false;
+
 	private final boolean infiniteLives = false;
 	private final int skipToLevel = 0;
 	
 	private boolean logScore = true;
-//	private final String logFile = "MCTS_best.txt";
-//	private final String logFile = "Ensemble_best.txt";
-	private final String logFile = "Ensemble_no_fruit.txt";
-//	private final String logFile = "Ensmble_no_fruit_no_emu.txt";
+	private final String logFile = "_.txt";
 
-	public Game (Machine machine) {
+	public Game (Machine machine, boolean invincible, boolean turbo) {
 
-		if(invincible) {
+		this.machine = machine;
+		if (invincible) {
 			disableCollisions();			
 		}
-		this.machine = machine;
+		if (turbo) {
+			enableTurbo();
+		}
 		pacman = new PacMan();
 		mazes = new Maze[]{new Maze(1), new Maze(2), new Maze(3), new Maze(4)};
 		maze = mazes[0];
+	}
+
+	private void enableTurbo() {
+		machine.memoryWrite(0x180b,  0x1);
 	}
 
 	private void message(String message) {

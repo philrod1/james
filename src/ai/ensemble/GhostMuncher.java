@@ -15,8 +15,8 @@ public class GhostMuncher implements Voice {
 	private final int maxDepth = 6;
 
 	@Override
-	public double[] getPreferences(Game game, List<MOVE> moves) {
-		SimGame sim = new SimGame(game);
+	public double[] getPreferences(Game game, List<MOVE> moves, boolean turbo) {
+		SimGame sim = new SimGame(game, turbo);
 		long stop = System.currentTimeMillis() + 8;
 		double[] prefs = new double[4];
 		if(game.pacman.isEnergised()) {

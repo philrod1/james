@@ -1,6 +1,7 @@
 package ai.common.simulator.maze;
 
 import java.awt.Point;
+import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
@@ -88,7 +89,7 @@ public class SimMaze {
 			try {
 				char[][] ram = new char[WIDTH][HEIGHT];
 				String data = readFile("res/maze" + mazeID + "_vram.txt", Charset.defaultCharset());
-				String[] lines = data.split("\n");
+				String[] lines = data.split("[\\r\\n]+");
 				for(int y = 0 ; y < HEIGHT ; y++) {
 					String[] values = lines[y].split("\\|");
 					for(int x = 0 ; x < WIDTH ; x++) {

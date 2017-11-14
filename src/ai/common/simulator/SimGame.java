@@ -38,8 +38,8 @@ public class SimGame {
 
 	private final Random rng = new Random();
 	
-	public SimGame(Game game) {
-		this.simPacman = new SimPacman(game);
+	public SimGame(Game game, boolean turbo) {
+		this.simPacman = new SimPacman(game, turbo);
 		level = game.getLevel();
 		maze.setMaze(game.getLevel());
 		score = game.getScore();

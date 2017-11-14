@@ -7,8 +7,9 @@ public abstract class AbstractAI implements AI {
 	
 	protected Game game;
 	private boolean running = true;
+    protected boolean turbo;
 
-	@Override
+    @Override
 	public void run() {
 		while(running) {
 			switch(game.getState()) {
