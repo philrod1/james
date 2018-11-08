@@ -4,6 +4,7 @@ import java.awt.Point;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.*;
 
 import ai.AbstractAI;
 import ai.common.Emulator;
@@ -18,22 +19,21 @@ import emulator.machine.Snapshot;
 public class EnsembleAI extends AbstractAI {
 	
 	public final static Emulator emu = new Emulator(new Pacman());
+	private final ExecutorService exec = Executors.newCachedThreadPool();
 //	private final SimGame sim;
 	
-	private final Voice pillMuncher;
-	private final Voice ghostDodger;
-	private final Voice ghostDodger2;
-	private final Voice fruitMuncher;
-	private final Voice ghostMuncher;
+	private final Voice[] voices;
 	
 	private MOVE lastMove = MOVE.LEFT;
 	private Point target = null;
 	
 	private double[] weights = new double[]{
 			1.0,    // Ghost Dodger
+			1.0,    // Ghost Dodger
             0.1,   // Pill Muncher
-            0.0,    // Fruit Muncher
-            1.0     // Ghost Muncher
+            0.5,    // Fruit Muncher
+            1.0,     // Ghost Muncher
+			1.0		// Ghost chaser
 	};
 
 	private final Random rng = new Random();
@@ -43,11 +43,14 @@ public class EnsembleAI extends AbstractAI {
 	public EnsembleAI (Game game) {
 //		sim = new SimGame(game);
 		this.game = game;
-		pillMuncher = new PillMuncher();
-		ghostDodger = new GhostDodger(game);
-		ghostDodger2 = new RulesGhostDodger();
-		fruitMuncher = new FruitMuncher();
-		ghostMuncher = new GhostMuncher();
+		voices = new Voice[]{
+				new GhostDodger(game, 1),
+				new GhostDodger(game, 2),
+				new PillMuncher(),
+				new FruitMuncher(),
+				new GhostMuncher(),
+				new GhostChaser()
+		};
 	}
 
 	protected MOVE play() {
@@ -82,11 +85,19 @@ public class EnsembleAI extends AbstractAI {
 //					System.out.println(move + "\tG1: " + gd1[move.ordinal()] + "\tG2: " + gd2[move.ordinal()]);
 //				}
 //				System.out.println();
-				double[] combinedPreferences = combine(
-						ghostDodger.getPreferences(game, safe),
-						pillMuncher.getPreferences(game, safe), 
-						fruitMuncher.getPreferences(game, safe),
-						ghostMuncher.getPreferences(game, safe));
+
+				double[][] results = new double[voices.length][];
+				try {
+					for (int i = 0 ; i < results.length ; i++) {
+						Voice v = voices[i];
+						results[i] = exec.submit(() -> v.getPreferences(game, safe)).get();
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+
+				double[] combinedPreferences = combine(results);
 				lastMove = bestMove(combinedPreferences, game.pacman.getAvailableMoves());
 				if(game.pacman.isEnergised()) {
 					target = game.getMaze().getNextCornerOrJunction(p, lastMove);
@@ -115,10 +126,11 @@ public class EnsembleAI extends AbstractAI {
 		double[] combined = new double[4];
 		for(int i = 0 ; i < 4 ; i++) {
 			combined[i] = 0;
-			for(int j = 1 ; j < prefs.length ; j++) {
+			for(int j = 2 ; j < prefs.length ; j++) {
 				combined[i] += weights[j] * prefs[j][i];
 			}
 			combined[i] *= (weights[0] * prefs[0][i]);
+			combined[i] *= (weights[1] * prefs[1][i]);
 		}
 		return combined;
 	}

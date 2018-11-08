@@ -528,6 +528,9 @@ public class Game {
 			Point pac = pacman.getTilePosition();
 			int best = 1000000;
 			List<Point> pills = getPillPositions();
+			if ((!allGhostsOut() || pacman.isEnergised()) && level < 20) {
+			    pills = getPillPositionsWhenEnergised();
+            }
 			for(Point pill : pills) { 
 				best = Math.min(best,maze.getAllDistances(pac, pill)[move.ordinal()]);
 			}
@@ -551,10 +554,16 @@ public class Game {
 		}
 		
 	}
-	
-	public List<Point> getPillPositions() {
-		return maze.getPillPositions(this);
-	}
+
+    public List<Point> getPillPositions() {
+        return maze.getPillPositions(this);
+    }
+
+    public List<Point> getPillPositionsWhenEnergised() {
+        List<Point> pills = maze.getPillPositions(this);
+        pills.removeAll(maze.powerPillPaths());
+        return pills;
+    }
 
 	public List<Point> getNormalPillPositions() {
 		return maze.getNormalPillPositions(this);

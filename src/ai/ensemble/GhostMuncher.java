@@ -12,12 +12,12 @@ import ai.common.MOVE;
 public class GhostMuncher implements Voice {
 
 	private final int maxPaths = 20;
-	private final int maxDepth = 6;
+	private final int maxDepth = 8;
 
 	@Override
 	public double[] getPreferences(Game game, List<MOVE> moves) {
 		SimGame sim = new SimGame(game);
-		long stop = System.currentTimeMillis() + 8;
+		long stop = System.currentTimeMillis() + 12;
 		double[] prefs = new double[4];
 		if(game.pacman.isEnergised()) {
 			Snapshot snap = game.getSnapshot();
