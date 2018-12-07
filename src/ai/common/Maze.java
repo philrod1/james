@@ -405,4 +405,69 @@ public class Maze {
 		return sb.toString();
 	}
 
+	public List<Point> powerPillPaths() {
+		final Point[][] paths = new Point[][]{
+				{
+						new Point(4, 5), 		new Point(23, 4), 	new Point(7, 30), 	new Point(24, 30),
+						new Point(3, 5), 		new Point(23, 3), 	new Point(6, 30), 	new Point(25, 30),
+						new Point(3, 4), 		new Point(23, 2), 	new Point(5, 30), 	new Point(26, 30),
+						new Point(3, 3), 		new Point(24, 2), 	new Point(4, 30), 	new Point(27, 30),
+						new Point(3, 2), 		new Point(25, 2), 	new Point(3, 30), 	new Point(28, 30),
+						new Point(4, 2), 		new Point(26, 2), 	new Point(3, 29), 	new Point(28, 29),
+						new Point(5, 2), 		new Point(27, 2), 	new Point(3, 28), 	new Point(28, 28),
+						new Point(6, 2), 		new Point(28, 2), 	new Point(3, 27), 	new Point(28, 27),
+						new Point(7, 2), 		new Point(28, 3), 	new Point(3, 26), 	new Point(28, 26),
+						new Point(8, 2), 		new Point(28, 4), 	new Point(3, 25), 	new Point(28, 25),
+						new Point(8, 3), 		new Point(28, 5), 	new Point(3, 24), 	new Point(28, 24),
+						new Point(8, 4), 		new Point(27, 5), 	new Point(4, 24), 	new Point(27, 24)
+				}, {
+						new Point(5, 11),		new Point(26, 11),	new Point(7, 30),		new Point(24, 30),
+						new Point(4, 11),		new Point(27, 11),	new Point(6, 30),		new Point(25, 30),
+						new Point(3, 11),		new Point(28, 11),	new Point(5, 30),		new Point(26, 30),
+						new Point(3, 10),		new Point(28, 10),	new Point(4, 30),		new Point(27, 30),
+						new Point(3, 9),		new Point(28, 9),		new Point(3, 30),		new Point(28, 30),
+						new Point(3, 8),		new Point(28, 8),		new Point(3, 29),		new Point(28, 29),
+						new Point(3, 7),		new Point(28, 7),		new Point(3, 28),		new Point(28, 28),
+						new Point(3, 6),		new Point(28, 6),		new Point(3, 27),		new Point(28, 27),
+						new Point(3, 5),		new Point(28, 5),		new Point(4, 27),		new Point(27, 27),
+						new Point(4, 5),		new Point(27, 5),		new Point(5, 27),		new Point(26, 27),
+						new Point(5, 5),		new Point(26, 5),		new Point(5, 26),		new Point(26, 26),
+						new Point(6, 5),		new Point(25, 5),		new Point(5, 25),		new Point(26, 25),
+						new Point(7, 5),		new Point(24, 5)
+				}, {
+						new Point(5,7),		new Point(26,7),		new Point(3,26),		new Point(28,26),
+						new Point(4,7),		new Point(27,7),		new Point(3,25),		new Point(28,25),
+						new Point(3,7),		new Point(28,7),		new Point(3,24),		new Point(28,24),
+						new Point(3,6),		new Point(28,6),		new Point(4,24),		new Point(27,24),
+						new Point(3,5),		new Point(28,5),		new Point(5,24),		new Point(26,24),
+						new Point(3,4),		new Point(28,4),		new Point(5,23),		new Point(26,23),
+						new Point(3,3),		new Point(28,3),		new Point(5,22),		new Point(26,22),
+						new Point(3,2),		new Point(28,2),
+						new Point(4,2),		new Point(27,2),
+						new Point(5,2),		new Point(26,2),
+						new Point(6,2),		new Point(25,2),
+						new Point(7,2),		new Point(24,2),
+						new Point(8,2),		new Point(23,2),
+						new Point(9,2),		new Point(22,2),
+						new Point(10,2),		new Point(21,2),
+						new Point(11,2),		new Point(20,2),
+						new Point(11,3),		new Point(20,3),
+						new Point(11,4),		new Point(20,4)
+				}, {
+						new Point(4,9),		new Point(27,9),		new Point(5,30),		new Point(26,30),
+						new Point(3,9),		new Point(28,9),		new Point(4,30),		new Point(27,30),
+						new Point(3,8),		new Point(28,8),		new Point(3,30),		new Point(28,30),
+						new Point(3,7),		new Point(28,7),		new Point(3,29),		new Point(28,29),
+						new Point(3,6),		new Point(28,6),		new Point(3,28),		new Point(28,28),
+						new Point(3,5),		new Point(28,5),		new Point(3,27),		new Point(28,27),
+						new Point(3,4),		new Point(28,4),		new Point(3,26),		new Point(28,26),
+						new Point(3,3),		new Point(28,3),		new Point(3,25),		new Point(28,25),
+						new Point(3,2),		new Point(28,2),		new Point(3,24),		new Point(28,24),
+						new Point(4,2),		new Point(27,2),		new Point(4,24),		new Point(27,24),
+						new Point(5,2),		new Point(26,2),
+				}
+		};
+		return Arrays.asList(paths[mazeId-1]);
+	}
+
 }

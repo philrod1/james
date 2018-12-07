@@ -18,14 +18,9 @@ public class PillMuncher implements Voice {
 		for(MOVE move : moves) {
 			Point p = game.pacman.getTilePosition();
 			Point t = game.getMaze().getNextCornerOrJunction(p, move);
-			if(game.pacman.isEnergised()) {
-				results[move.ordinal()] = 0.000000000001;
-			} else if (!game.allGhostsOut() && game.getMaze().pathContainsPowerPill(p, t, game)) {
-				results[move.ordinal()] = 0.00001;
-			} else {
-				int distance = game.pacman.distanceToNearestPillPath(move) + 1;
+			int distance = game.pacman.distanceToNearestPillPath(move) + 1;
 				results[move.ordinal()] = 1.0 / distance + rng.nextDouble() * EPSILON;
-			}
+
 		}
 		return results;
 	}

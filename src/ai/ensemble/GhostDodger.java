@@ -15,8 +15,9 @@ public class GhostDodger implements Voice {
 	private final int maxPaths = 8;
 	private final int maxDepth = 8;
 	
-	public GhostDodger(Game game) {
+	public GhostDodger(Game game, int pacPause) {
 		sim = new SimGame(game);
+		sim.setPacPause(pacPause);
 	}
 
 	@Override
@@ -26,7 +27,7 @@ public class GhostDodger implements Voice {
 			return new double[]{1,1,1,1};
 		}
 		
-		long stop = System.currentTimeMillis() + 8;
+		long stop = System.currentTimeMillis() + 12;
 		double[] prefs = new double[4];
 		Snapshot snap = game.getSnapshot();
 		Maze maze = game.getMaze();
