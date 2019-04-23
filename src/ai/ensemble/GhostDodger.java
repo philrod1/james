@@ -12,7 +12,7 @@ import ai.common.MOVE;
 public class GhostDodger implements Voice {
 	
 	private final SimGame sim;
-	private final int maxPaths = 8;
+	private final int maxPaths = 4;
 	private final int maxDepth = 8;
 	
 	public GhostDodger(Game game, int pacPause) {
@@ -27,7 +27,7 @@ public class GhostDodger implements Voice {
 			return new double[]{1,1,1,1};
 		}
 		
-		long stop = System.currentTimeMillis() + 12;
+		long stop = System.currentTimeMillis() + 10;
 		double[] prefs = new double[4];
 		Snapshot snap = game.getSnapshot();
 		Maze maze = game.getMaze();

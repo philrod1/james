@@ -127,23 +127,24 @@ public class Keyboard implements KeyListener {
 		if (isKeyPressed(OSD_KEY_3)) {
 			machine.portWrite(0, (char) (machine.portRead(0) & 0xDF));
 		}
-		
-		if (isKeyPressed(OSD_KEY_UP)) {
+		else
+		if (isKeyPressed(OSD_KEY_UP)  || isKeyPressed(OSD_KEY_W)) {
+			System.out.println("UP");
 			machine.portWrite(0, (char) (machine.portRead(0) & 0xFE));
 		}
-		
-		if (isKeyPressed(OSD_KEY_LEFT)) {
+		else
+		if (isKeyPressed(OSD_KEY_LEFT)  || isKeyPressed(OSD_KEY_A)) {
 			machine.portWrite(0, (char) (machine.portRead(0) & 0xFD));
 		}
-		
-		if (isKeyPressed(OSD_KEY_RIGHT)) {
+		else
+		if (isKeyPressed(OSD_KEY_RIGHT)  || isKeyPressed(OSD_KEY_D)) {
 			machine.portWrite(0, (char) (machine.portRead(0) & 0xFB));
 		}
-		
-		if (isKeyPressed(OSD_KEY_DOWN)) {
+		else
+		if (isKeyPressed(OSD_KEY_DOWN)  || isKeyPressed(OSD_KEY_S)) {
 			machine.portWrite(0, (char) (machine.portRead(0) & 0xF7));
 		}
-		
+		else
 		if (isKeyPressed(OSD_KEY_1)) {
 			machine.portWrite(1, (char) (machine.portRead(1) & 0xDF));
 		}

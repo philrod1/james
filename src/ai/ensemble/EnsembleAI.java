@@ -1,6 +1,7 @@
 package ai.ensemble;
 
 import java.awt.Point;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -79,18 +80,16 @@ public class EnsembleAI extends AbstractAI {
 				}
 			}
 			if((p.equals(target) || chomp) && safe.size() > 0) {
-//				double[] gd2 = ghostDodger2.getPreferences(game, safe);
-//				double[] gd1 = ghostDodger.getPreferences(game, safe);
-//				for (MOVE move : safe) {
-//					System.out.println(move + "\tG1: " + gd1[move.ordinal()] + "\tG2: " + gd2[move.ordinal()]);
-//				}
-//				System.out.println();
 
 				double[][] results = new double[voices.length][];
+				List<Future<double[]>> futures = new ArrayList<>(voices.length);
 				try {
 					for (int i = 0 ; i < results.length ; i++) {
 						Voice v = voices[i];
-						results[i] = exec.submit(() -> v.getPreferences(game, safe)).get();
+						futures.add(i, exec.submit(() -> v.getPreferences(game, safe)));
+					}
+					for (int i = 0 ; i < results.length ; i++) {
+						results[i] = futures.get(i).get();
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
