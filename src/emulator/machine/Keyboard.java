@@ -1,5 +1,7 @@
 package emulator.machine;
 
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -69,15 +71,31 @@ public class Keyboard implements KeyListener {
     public static final int OSD_KEY_PGDN        = KeyEvent.VK_PAGE_DOWN;
     public static final int OSD_KEY_F11         = KeyEvent.VK_F11;
     public static final int OSD_KEY_F12         = KeyEvent.VK_F12;
-    
-    public boolean[] key = new boolean[255];
+	private final GraphicsDevice device;
+	private final JFrame frame;
+
+	public boolean[] key = new boolean[255];
     private final FullMachine machine;
     
-    public Keyboard(FullMachine machine) {
+    public Keyboard(FullMachine machine, GraphicsDevice device, JFrame frame) {
 		this.machine = machine;
+		this.device = device;
+		this.frame = frame;
 	}
-    
-    protected void poll() {
+
+	protected void poll() {
+    	/*
+    	 * F for fullscreen toggle
+    	 */
+    	if (isKeyPressed(OSD_KEY_F)) {
+			if (device.getFullScreenWindow() == null) {
+				device.setFullScreenWindow(frame);
+			} else {
+				device.setFullScreenWindow(null);
+				frame.setBounds(1, 1, 458, 606);
+			}
+		}
+
     	/*
 		 * P for pause
 		 */

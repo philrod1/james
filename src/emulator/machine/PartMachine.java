@@ -35,7 +35,13 @@ public class PartMachine implements Machine {
 		}
 		cpu.execute(cycles);
 		cpu.causeInterrupt(0);
-		snapshot = new Snapshot(memory.clone(), cpu.getRegs());
+		snapshot = new Snapshot(getRam(), cpu.getRegs());
+	}
+
+	private char[] getRam() {
+		char[] ram = new char[4096];
+		System.arraycopy(memory, 0x4000, ram, 0, 4096);
+		return ram;
 	}
 
 	@Override
@@ -69,15 +75,13 @@ public class PartMachine implements Machine {
 	@Override
 	public void syncToSnapshot(Snapshot snapshot) {
 		this.snapshot = snapshot;
-		snapshot.RAM[0x4dc9] = (char) rng.nextInt(0x10000);
-		snapshot.RAM[0x4dca] = (char) rng.nextInt(0x10000);
-		memCopy(memory, snapshot.RAM);
+		snapshot.RAM[0x0dc9] = (char) rng.nextInt(0x10000);
+		snapshot.RAM[0x0dca] = (char) rng.nextInt(0x10000);
+		memCopy(memory, snapshot.RAM, 0x4000, 4096);
 		cpu.setRegs(snapshot.regs);
 	}
 	
-	private synchronized void memCopy(char[] dest, char[] src) {
-		for(int i = 0 ; i < dest.length ; i++) {
-			dest[i] = src[i];
-		}
+	private synchronized void memCopy(char[] dest, char[] src, int offset, int limit) {
+		if (limit >= 0) System.arraycopy(src, 0, dest, offset, limit);
 	}
 }

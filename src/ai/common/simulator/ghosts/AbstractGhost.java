@@ -424,7 +424,7 @@ public abstract class AbstractGhost implements Ghost {
 	
 	@Override
 	public void updatePatterns(char[] RAM) {
-		int base = 0x4D56 + gid*12;
+		int base = 0x0D56 + gid*12;
 		for(int i = 0 ; i < 3 ; i++) {
 			currentPatterns[i] = (RAM[base + i*4] << 24) | (RAM[base+1 + i*4] << 16) | (RAM[base+2 + i*4] << 8) | (RAM[base+3 + i*4]);
 		}

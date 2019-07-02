@@ -159,9 +159,9 @@ public class SimGame {
 	}
 	
 	private int getGhostState(char[] RAM, int ghost) {
-		int state = RAM[0x4dac + ghost];
+		int state = RAM[0x0dac + ghost];
 		if(state == 0) {
-			return 3 + RAM[0x4da0 + ghost];
+			return 3 + RAM[0x0da0 + ghost];
 		}
 		return state - 1;
 	}
@@ -169,8 +169,8 @@ public class SimGame {
 	private Point getGhostPixelPosition(char[] RAM, int ghost) {
 		int offset = ghost * 2;
 		return new Point (
-				256-RAM[0x4d01 + offset], 
-				RAM[0x4d00 + offset]
+				256-RAM[0x0d01 + offset],
+				RAM[0x0d00 + offset]
 			);
 	}
 
@@ -225,20 +225,20 @@ public class SimGame {
 	public void sync(char[] RAM) {
 		for(int i = 0 ; i < 4 ; i++) {
 			ghosts[i].setPixelPosition(getGhostPixelPosition(RAM, i));
-			ghosts[i].setPreviousOrientation(RAM[0x4d28+i]);
-			ghosts[i].setCurrentOrientation(RAM[0x4d2c+i]);
+			ghosts[i].setPreviousOrientation(RAM[0x0d28+i]);
+			ghosts[i].setCurrentOrientation(RAM[0x0d2c+i]);
 			ghosts[i].setState(getGhostState(RAM, i));
-			ghosts[i].setFrightened(RAM[0x4da7+i] != 0);
+			ghosts[i].setFrightened(RAM[0x0da7+i] != 0);
 			ghosts[i].updatePatterns(RAM);
 		}
-		ghosts[0].setCruiseLevel(RAM[0x4db6] + RAM[0x4db7]);
-		simPacman.setCurrentMove(pacmanOrientations[RAM[0x4d30]]);
-		simPacman.setPixelPosition(new Point(255-RAM[0x4d09], RAM[0x4d08]));
-		simPacman.setEnergised(RAM[0x4da6]==1);
+		ghosts[0].setCruiseLevel(RAM[0x0db6] + RAM[0x0db7]);
+		simPacman.setCurrentMove(pacmanOrientations[RAM[0x0d30]]);
+		simPacman.setPixelPosition(new Point(255-RAM[0x0d09], RAM[0x0d08]));
+		simPacman.setEnergised(RAM[0x0da6]==1);
 		simPacman.updatePatterns(RAM);
-		simPacman.setAlive(RAM[0x4da5] == 0);
-		energisedFramesRemaining = ((RAM[0x4dcc] * 256) + RAM[0x4dcb])/2;
-		level = RAM[0x4e13] + 1;
+		simPacman.setAlive(RAM[0x0da5] == 0);
+		energisedFramesRemaining = ((RAM[0x0dcc] * 256) + RAM[0x0dcb])/2;
+		level = RAM[0x0e13] + 1;
 		maze.sync(level, RAM);
 		ghostManager.sync(level, RAM);
 		score = getLastScore(RAM);
@@ -354,9 +354,9 @@ public class SimGame {
 	private int getLastScore(char[] RAM) {
 		try {
 			return Integer.parseInt(
-					hexString(RAM[0x4e82]) + 
-					hexString(RAM[0x4e81]) + 
-					hexString(RAM[0x4e80]) );
+					hexString(RAM[0x0e82]) +
+					hexString(RAM[0x0e81]) +
+					hexString(RAM[0x0e80]) );
 		} catch (NumberFormatException nfe) {
 			return 0;
 		}
@@ -454,7 +454,7 @@ public class SimGame {
 
 	public double rolloutGhostMunch(Point target, int depth, Maze maze) {
 		ghostsEaten = 0;
-		return rolloutGhostMunchPrivate(target, depth, maze);
+		return rolloutGhostMunchPrivate(target, depth, maze) / depth;
 	}
 
 	private double rolloutGhostMunchPrivate(Point target, int depth, Maze maze) {

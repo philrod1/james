@@ -14,17 +14,17 @@ public class GhostData {
 	
 	public GhostData(char[] RAM, int ghost) {
 		this.ghost = ghost;
-		px = 256-RAM[0x4d01 + ghost * 2];
-		py = RAM[0x4d00 + ghost * 2];
-		previousOrientation = RAM[0x4d28 + ghost];
-		currentOrientation  = RAM[0x4d2c + ghost];
+		px = 256-RAM[0x0d01 + ghost * 2];
+		py = RAM[0x0d00 + ghost * 2];
+		previousOrientation = RAM[0x0d28 + ghost];
+		currentOrientation  = RAM[0x0d2c + ghost];
 		state = getGhostState(RAM, ghost);
-		frightened = RAM[0x4da7 + ghost] != 0;
+		frightened = RAM[0x0da7 + ghost] != 0;
 		switch(ghost) {
 		case 0: pillCount = 0; break;
-		case 1: pillCount = RAM[0x4e0f]; break;
-		case 2: pillCount = RAM[0x4e10]; break;
-		case 3: pillCount = RAM[0x4e11]; break;
+		case 1: pillCount = RAM[0x0e0f]; break;
+		case 2: pillCount = RAM[0x0e10]; break;
+		case 3: pillCount = RAM[0x0e11]; break;
 		default: pillCount = 0;
 		}
 		int base = 0x4D56 + ghost * 12;
@@ -32,7 +32,7 @@ public class GhostData {
 		scared = (RAM[base+5] << 24) | (RAM[base+4] << 16) | (RAM[base+7]  << 8) | (RAM[base+6]);
 		slow   = (RAM[base+9] << 24) | (RAM[base+8] << 16) | (RAM[base+11] << 8) | (RAM[base+10]);
 		if(ghost==0) {
-			cruiseLevel = RAM[0x4db6] + RAM[0x4db7];
+			cruiseLevel = RAM[0x0db6] + RAM[0x0db7];
 			base = 0x4D52;
 			elroy1 = (RAM[base+1] << 24) | (RAM[base] << 16) | (RAM[base+3] << 8) | (RAM[base+2]);
 			base = 0x4D4E;
@@ -122,9 +122,9 @@ public class GhostData {
 	}
 	
 	private int getGhostState(char[] RAM, int ghost) {
-		int state = RAM[0x4dac + ghost];
+		int state = RAM[0x0dac + ghost];
 		if(state == 0) {
-			return 3 + RAM[0x4da0 + ghost];
+			return 3 + RAM[0x0da0 + ghost];
 		}
 		return state - 1;
 	}

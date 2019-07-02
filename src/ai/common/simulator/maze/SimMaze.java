@@ -60,7 +60,7 @@ public class SimMaze {
 		pillCount = 0;
 		for(Tile tile : mazeLists[getMazeID(level)]) {
 			if(tile != null) {
-				if(tile.setValue(RAM[tile.spriteRAM])) {
+				if(tile.setValue(RAM[tile.spriteRAM-0x4000])) {
 					pillCount++;
 				}
 			}

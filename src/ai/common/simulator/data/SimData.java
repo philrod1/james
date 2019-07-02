@@ -28,17 +28,17 @@ public class SimData {
 	public boolean random;
 	
 	public SimData(char[] RAM) {
-		random = RAM[0x4dc1] == 0;
+		random = RAM[0x0dc1] == 0;
 		blinky = new GhostData(RAM, 0);
 		pinky  = new GhostData(RAM, 1);
 		inky   = new GhostData(RAM, 2);
 		sue    = new GhostData(RAM, 3);
-		pacmanOrientation = RAM[0x4d30];
-		pacmanIsAlive = RAM[0x4da5] == 0;
-		pacX = 255-RAM[0x4d09];
-		pacY =     RAM[0x4d08];
-		energisedFramesRemaining = ((RAM[0x4dcc] * 256) + RAM[0x4dcb])/2;
-		level = RAM[0x4e13] + 1;
+		pacmanOrientation = RAM[0x0d30];
+		pacmanIsAlive = RAM[0x0da5] == 0;
+		pacX = 255-RAM[0x0d09];
+		pacY =     RAM[0x0d08];
+		energisedFramesRemaining = ((RAM[0x0dcc] * 256) + RAM[0x0dcb])/2;
+		level = RAM[0x0e13] + 1;
 //		System.out.println("SimData from RAM level = " + level);
 		mazeId = getMazeNumber(level-1);
 		pillData = new LinkedList<Point>();
@@ -62,10 +62,10 @@ public class SimData {
 			}
 		}
 //		System.out.println("SimData from RAM " + pillData.size() + " ... " + powerPillData.size());
-		framesSincePillEaten = ((RAM[0x4d98] * 256) + RAM[0x4d97]);
-		globalPillCount = RAM[0x4d9f];		
-		globalMode = RAM[0x4e12] == 1;
-		pacmanEnenergised = RAM[0x4da6]==1;
+		framesSincePillEaten = ((RAM[0x0d98] * 256) + RAM[0x0d97]);
+		globalPillCount = RAM[0x0d9f];
+		globalMode = RAM[0x0e12] == 1;
+		pacmanEnenergised = RAM[0x0da6]==1;
 		int base = 0x4D46;
 		pacmanNormalPattern = (RAM[base+1] << 24) | (RAM[base] << 16) | (RAM[base+3] << 8) | (RAM[base+2]);
 		base = 0x4D4A;
@@ -142,9 +142,9 @@ public class SimData {
 	private int getLastScore(char[] RAM) {
 		try {
 			return Integer.parseInt(
-					hexString(RAM[0x4e82]) + 
-					hexString(RAM[0x4e81]) + 
-					hexString(RAM[0x4e80]) );
+					hexString(RAM[0x0e82]) +
+					hexString(RAM[0x0e81]) +
+					hexString(RAM[0x0e80]) );
 		} catch (NumberFormatException nfe) {
 			return 0;
 		}

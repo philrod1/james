@@ -66,7 +66,7 @@ public class EnsembleAI extends AbstractAI {
 				p = target;
 			}
 			Snapshot snap = game.getSnapshot();
-			char ghostCounter2 = snap.RAM[0x4dd0];
+			char ghostCounter2 = snap.RAM[0x0dd0];
 			if(ghostCounter2 != ghostCounter) {
 				ghostCounter = ghostCounter2;
 				chomp = true;

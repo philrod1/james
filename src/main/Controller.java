@@ -1,10 +1,11 @@
 package main;
 
 import java.awt.*;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 import ai.AI;
 import ai.common.Game;
@@ -14,43 +15,47 @@ import emulator.games.Pacman;
 import emulator.machine.FullMachine;
 
 public class Controller {
+	static GraphicsDevice device = GraphicsEnvironment
+			.getLocalGraphicsEnvironment().getScreenDevices()[0];
 
 	private final double gameSpeed = 1.0;
 
-	private final int width = 224 * 2, height = 288 * 2;
+	private final int width = 458, height = 606;
 
 	public static void main(String[] args) {
 		new Controller();
 	}
 
 	public Controller() {
-		final FullMachine machine = new FullMachine(new Pacman());
 		final JFrame frame = new JFrame("Ms. Pac-Man");
-		frame.setBounds(1, 1, width, height);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().add(machine.getScreen());
-		frame.addKeyListener(machine.getKeyboard());
-		frame.pack();
-		frame.setVisible(true);
-		
+		final FullMachine machine = new FullMachine(new Pacman(), device, frame);
+
+		SwingUtilities.invokeLater(() -> {
+			frame.setBounds(1, 1, width, height);
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.getContentPane().add(machine.getScreen());
+			frame.addKeyListener(machine.getKeyboard());
+			frame.pack();
+			device.setFullScreenWindow(frame);
+			frame.setResizable(true);
+			frame.setVisible(true);
+			System.out.println(frame.getBounds());
+		});
+
 		final Game game = new Game(machine);
+//		machine.revertToSnapshot(112);
 
 		final AI ai = new EnsembleAI(game);
 //		final AI ai = new MCTSPlayer(game);
 
-		final TimerTask task = new TimerTask() {
-			@Override
-			public void run() {
+		final Runnable task = () -> {
 				game.update();
 				machine.step();
-			}
 		};
 
-		final Timer timer = new Timer();
-		timer.scheduleAtFixedRate(task, 0, (int)(1000/machine.getFPS() * 1/gameSpeed ));
-
-		final Thread aiThread = new Thread(ai);
-		aiThread.start();
+		ScheduledExecutorService ses = Executors.newScheduledThreadPool(2);
+		ses.scheduleAtFixedRate(task, 0, (int)((1000 / machine.getFPS()) /gameSpeed), TimeUnit.MILLISECONDS);
+		ses.schedule(ai,0, TimeUnit.MILLISECONDS);
 
 	}
 

@@ -1,7 +1,9 @@
 package emulator.cpu.z80;
 
 
-public class Z80Pair {
+import java.io.Serializable;
+
+public class Z80Pair implements Serializable {
 
 	public int H, L, W;
 

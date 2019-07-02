@@ -68,26 +68,26 @@ public class Blinky extends AbstractGhost {
 	
 	@Override
 	public void updatePatterns(char[] RAM) {
-		currentPatterns[0] =  (RAM[0x4D56+1] << 24) 
-							| (RAM[0x4D56+0] << 16) 
-							| (RAM[0x4D56+3] << 8) 
-							| (RAM[0x4D56+2]);
-		currentPatterns[3] =  (RAM[0x4D52+1] << 24) 
-							| (RAM[0x4D52+0] << 16) 
-							| (RAM[0x4D52+3] << 8) 
-							| (RAM[0x4D52+2]);
-		currentPatterns[4] =  (RAM[0x4D4E+1] << 24) 
-							| (RAM[0x4D4E+0] << 16) 
-							| (RAM[0x4D4E+3] << 8) 
-							| (RAM[0x4D4E+2]);
-		currentPatterns[1] =  (RAM[0x4D5A+1] << 24) 
-							| (RAM[0x4D5A+0] << 16) 
-							| (RAM[0x4D5A+3] << 8) 
-							| (RAM[0x4D5A+2]);
-		currentPatterns[2] =  (RAM[0x4D5E+1] << 24) 
-							| (RAM[0x4D5E+0] << 16) 
-							| (RAM[0x4D5E+3] << 8) 
-							| (RAM[0x4D5E+2]);
+		currentPatterns[0] =  (RAM[0x0D56+1] << 24)
+							| (RAM[0x0D56+0] << 16)
+							| (RAM[0x0D56+3] << 8)
+							| (RAM[0x0D56+2]);
+		currentPatterns[3] =  (RAM[0x0D52+1] << 24)
+							| (RAM[0x0D52+0] << 16)
+							| (RAM[0x0D52+3] << 8)
+							| (RAM[0x0D52+2]);
+		currentPatterns[4] =  (RAM[0x0D4E+1] << 24)
+							| (RAM[0x0D4E+0] << 16)
+							| (RAM[0x0D4E+3] << 8)
+							| (RAM[0x0D4E+2]);
+		currentPatterns[1] =  (RAM[0x0D5A+1] << 24)
+							| (RAM[0x0D5A+0] << 16)
+							| (RAM[0x0D5A+3] << 8)
+							| (RAM[0x0D5A+2]);
+		currentPatterns[2] =  (RAM[0x0D5E+1] << 24)
+							| (RAM[0x0D5E+0] << 16)
+							| (RAM[0x0D5E+3] << 8)
+							| (RAM[0x0D5E+2]);
 	}
 	
 	@Override

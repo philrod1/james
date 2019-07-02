@@ -17,6 +17,6 @@ public class Snapshot implements Serializable {
 	}
 
 	public Point getPacman() {
-		return new Point(new Point(255-RAM[0x4d09], RAM[0x4d08]));
+		return new Point(new Point(255-RAM[0x0d09], RAM[0x0d08]));
 	}
 }

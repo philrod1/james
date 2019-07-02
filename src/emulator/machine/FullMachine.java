@@ -1,5 +1,6 @@
 package emulator.machine;
 
+import java.awt.*;
 import java.awt.event.KeyListener;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -13,20 +14,21 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import emulator.games.Pacman;
 import emulator.video.GenericVideo;
+import main.Controller;
 
 public class FullMachine extends PartMachine {
 
 	private final Keyboard keyboard;
 	private final GenericVideo video;
 	
-	public FullMachine(Pacman pacman) {
+	public FullMachine(Pacman pacman, GraphicsDevice device, JFrame frame) {
 		super(pacman);
 		video = pacman.getVideo();
-		keyboard = new Keyboard(this);
+		keyboard = new Keyboard(this, device, frame);
 	}
 	
 	@Override

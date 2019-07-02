@@ -98,17 +98,17 @@ public class GhostManager {
 
 	public void sync(int level, char[] RAM) {
 		//TODO - The real machine wraps back to 0 - should we?
-		framesSincePillEaten = ((RAM[0x4d98] * 256) + RAM[0x4d97]);
-		globalPillCount = RAM[0x4d9f];
+		framesSincePillEaten = ((RAM[0x0d98] * 256) + RAM[0x0d97]);
+		globalPillCount = RAM[0x0d9f];
 		
 		ghostPillCounts[0] = 0;
-		ghostPillCounts[1] = RAM[0x4e0f];
-		ghostPillCounts[2] = RAM[0x4e10];
-		ghostPillCounts[3] = RAM[0x4e11];
+		ghostPillCounts[1] = RAM[0x0e0f];
+		ghostPillCounts[2] = RAM[0x0e10];
+		ghostPillCounts[3] = RAM[0x0e11];
 		
-		globalMode = RAM[0x4e12] == 1;
+		globalMode = RAM[0x0e12] == 1;
 		
-		random = RAM[0x4dc1] == 0;
+		random = RAM[0x0dc1] == 0;
 		
 		for(int i = 0 ; i < ghosts.length ; i++) {
 			Ghost ghost = ghosts[i];

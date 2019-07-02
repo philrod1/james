@@ -147,9 +147,9 @@ public class SimPacman {
 	}
 
 	public void updatePatterns(char[] RAM) {
-		int base = 0x4D46;
+		int base = 0x0D46;
 		stepPatterns[0] = (RAM[base+1] << 24) | (RAM[base] << 16) | (RAM[base+3] << 8) | (RAM[base+2]);
-		base = 0x4D4A;
+		base = 0x0D4A;
 		stepPatterns[0] = (RAM[base+1] << 24) | (RAM[base] << 16) | (RAM[base+3] << 8) | (RAM[base+2]);
 	}
 
