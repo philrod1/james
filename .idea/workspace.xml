@@ -7,7 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d45da6cc-5c83-462c-a955-b4a0195a8ebb" name="Default" comment="multi-threaded and better power-pill avoidance (probably too much)">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/james_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/production/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai/rhea/Individual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ai/rhea/RHEA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artifacts/james_jar/james.jar" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/james_jar/james.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/ai/AbstractAI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/ai/AbstractAI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/ai/AbstractAI.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/ai/AbstractAI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/james/ai/common/Game$BONUS$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/ai/common/Game$BONUS$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/james/ai/common/Game$BONUS$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/ai/common/Game$BONUS$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/james/ai/common/Game$BONUS$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/ai/common/Game$BONUS$3.class" afterDir="false" />
@@ -33,27 +40,746 @@
       <change beforePath="$PROJECT_DIR$/production/james/ai/ensemble/GhostDodger.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/ai/ensemble/GhostDodger.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/james/ai/ensemble/GhostMuncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/ai/ensemble/GhostMuncher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/james/ai/ensemble/PillMuncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/ai/ensemble/PillMuncher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$100.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$101.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$102.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$103.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$104.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$105.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$106.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$107.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$108.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$109.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$110.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$111.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$112.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$113.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$114.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$115.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$116.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$117.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$118.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$119.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$120.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$121.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$122.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$123.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$124.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$125.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$126.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$127.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$128.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$129.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$130.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$131.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$132.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$133.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$134.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$135.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$136.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$137.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$138.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$139.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$140.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$141.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$142.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$143.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$144.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$145.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$146.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$147.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$148.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$149.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$150.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$151.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$152.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$153.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$154.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$155.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$156.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$157.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$158.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$159.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$160.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$161.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$162.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$163.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$164.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$165.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$166.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$167.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$168.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$169.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$17.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$170.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$171.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$172.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$173.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$174.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$175.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$176.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$177.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$178.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$179.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$18.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$180.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$181.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$182.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$183.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$184.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$185.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$186.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$187.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$188.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$189.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$19.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$190.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$191.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$192.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$193.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$194.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$195.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$196.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$197.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$198.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$199.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$20.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$200.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$201.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$202.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$203.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$204.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$205.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$206.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$207.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$208.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$209.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$21.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$210.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$211.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$212.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$213.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$214.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$215.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$216.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$217.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$218.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$219.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$22.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$220.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$221.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$222.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$223.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$224.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$225.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$226.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$227.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$228.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$229.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$23.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$230.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$231.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$232.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$233.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$234.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$235.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$236.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$237.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$238.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$239.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$24.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$240.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$241.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$242.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$243.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$244.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$245.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$246.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$247.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$248.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$249.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$25.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$250.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$251.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$252.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$253.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$254.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$255.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$256.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$257.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$258.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$259.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$26.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$260.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$261.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$262.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$263.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$264.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$265.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$266.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$267.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$268.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$269.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$27.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$270.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$271.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$272.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$273.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$274.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$275.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$276.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$277.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$278.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$279.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$28.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$280.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$281.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$282.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$283.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$284.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$285.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$286.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$287.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$288.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$289.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$29.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$290.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$291.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$292.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$293.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$294.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$295.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$296.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$297.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$298.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$299.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$30.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$300.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$301.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$302.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$303.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$304.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$305.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$306.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$307.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$308.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$309.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$31.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$310.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$311.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$312.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$313.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$314.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$315.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$316.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$317.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$318.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$319.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$32.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$320.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$321.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$322.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$323.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$324.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$325.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$326.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$327.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$328.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$329.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$33.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$330.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$331.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$332.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$333.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$334.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$335.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$336.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$337.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$338.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$339.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$34.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$340.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$341.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$342.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$343.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$344.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$345.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$346.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$347.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$348.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$349.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$35.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$350.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$351.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$352.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$353.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$354.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$355.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$356.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$357.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$358.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$359.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$36.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$360.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$361.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$362.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$363.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$364.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$365.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$366.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$367.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$368.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$369.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$37.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$370.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$371.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$372.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$373.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$374.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$375.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$376.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$377.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$378.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$379.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$38.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$380.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$381.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$382.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$383.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$384.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$385.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$386.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$387.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$388.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$389.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$39.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$390.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$391.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$392.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$393.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$394.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$395.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$396.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$397.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$398.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$399.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$40.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$400.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$401.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$402.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$403.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$404.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$405.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$406.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$407.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$408.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$409.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$41.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$410.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$411.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$412.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$413.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$414.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$415.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$416.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$417.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$418.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$419.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$42.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$420.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$421.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$422.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$423.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$424.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$425.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$426.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$427.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$428.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$429.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$43.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$430.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$431.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$432.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$433.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$434.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$435.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$436.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$437.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$438.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$439.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$44.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$440.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$441.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$442.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$443.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$444.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$445.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$446.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$447.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$448.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$449.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$45.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$450.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$451.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$452.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$453.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$454.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$455.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$456.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$457.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$458.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$459.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$46.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$460.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$461.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$462.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$463.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$464.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$465.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$466.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$467.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$468.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$469.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$47.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$470.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$471.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$472.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$473.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$474.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$475.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$476.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$477.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$478.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$479.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$48.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$480.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$481.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$482.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$483.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$484.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$485.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$486.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$487.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$488.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$489.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$49.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$490.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$491.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$492.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$493.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$494.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$495.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$496.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$497.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$498.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$499.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$50.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$500.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$501.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$502.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$503.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$504.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$505.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$506.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$507.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$508.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$509.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$51.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$510.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$511.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$512.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$513.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$514.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$515.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$516.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$517.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$518.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$519.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$52.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$520.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$521.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$522.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$523.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$524.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$525.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$526.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$527.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$528.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$529.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$53.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$530.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$531.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$532.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$533.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$534.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$535.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$536.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$537.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$538.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$539.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$54.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$540.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$541.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$542.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$543.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$544.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$545.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$546.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$547.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$548.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$549.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$55.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$550.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$551.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$552.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$553.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$554.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$555.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$556.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$557.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$558.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$559.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$56.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$560.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$561.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$562.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$563.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$564.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$565.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$566.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$567.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$568.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$569.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$57.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$570.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$571.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$572.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$573.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$574.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$575.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$576.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$577.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$578.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$579.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$58.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$580.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$581.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$582.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$583.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$584.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$585.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$586.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$587.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$588.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$589.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$59.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$590.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$591.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$592.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$593.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$594.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$595.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$596.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$597.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$598.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$599.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$60.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$600.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$601.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$602.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$603.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$604.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$605.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$606.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$607.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$608.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$609.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$61.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$610.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$611.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$612.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$613.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$614.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$615.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$616.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$617.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$618.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$619.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$62.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$620.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$621.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$622.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$623.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$624.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$625.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$626.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$627.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$628.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$629.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$63.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$630.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$631.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$632.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$633.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$634.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$635.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$636.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$637.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$638.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$639.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$64.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$640.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$641.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$642.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$643.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$644.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$645.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$646.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$647.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$648.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$649.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$65.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$650.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$651.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$652.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$653.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$654.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$655.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$656.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$657.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$658.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$659.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$66.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$660.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$661.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$662.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$663.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$664.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$665.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$666.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$667.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$668.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$669.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$67.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$670.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$671.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$672.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$673.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$674.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$675.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$676.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$677.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$678.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$679.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$68.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$680.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$681.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$682.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$683.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$684.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$685.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$686.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$687.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$688.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$689.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$69.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$690.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$691.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$692.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$693.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$694.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$695.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$696.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$697.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$698.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$699.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$70.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$700.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$701.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$702.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$703.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$704.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$705.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$706.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$707.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$708.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$709.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$71.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$710.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$711.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$712.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$713.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$714.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$715.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$716.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$717.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$72.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$73.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$74.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$75.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$76.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$77.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$78.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$79.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$80.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$81.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$82.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$83.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$84.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$85.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$86.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$87.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$88.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$89.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$90.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$91.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$92.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$93.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$94.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$95.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$96.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$97.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$98.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$99.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80$OpcodeFn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80Pair.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80Regs.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/emulator/cpu/z80/Z80Regs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/machine/FullMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/emulator/machine/FullMachine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/james/emulator/machine/Keyboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/emulator/machine/Keyboard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/james/emulator/machine/PartMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/emulator/machine/PartMachine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/james/emulator/machine/Snapshot.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/emulator/machine/Snapshot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/emulator/video/BufferedImageScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/emulator/video/BufferedImageScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/main/Controller$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/james/main/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/james/main/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ai/AbstractAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/AbstractAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ai/common/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/common/Maze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ai/common/simulator/SimGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/common/simulator/SimGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/common/simulator/SimPacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/common/simulator/SimPacman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ai/common/simulator/data/GhostData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/common/simulator/data/GhostData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ai/common/simulator/data/SimData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/common/simulator/data/SimData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/common/simulator/ghosts/AbstractGhost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/common/simulator/ghosts/AbstractGhost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/common/simulator/ghosts/Blinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/common/simulator/ghosts/Blinky.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/common/simulator/ghosts/GhostManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/common/simulator/ghosts/GhostManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/common/simulator/maze/SimMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/common/simulator/maze/SimMaze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ai/ensemble/EnsembleAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/ensemble/EnsembleAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ai/ensemble/GhostMuncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/ensemble/GhostMuncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ai/ensemble/GhostDodger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/ensemble/GhostDodger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emulator/cpu/z80/Z80.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emulator/cpu/z80/Z80.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/emulator/cpu/z80/Z80Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emulator/cpu/z80/Z80Pair.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/emulator/cpu/z80/Z80Regs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emulator/cpu/z80/Z80Regs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emulator/machine/FullMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emulator/machine/FullMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/emulator/machine/Keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emulator/machine/Keyboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emulator/machine/PartMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emulator/machine/PartMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emulator/machine/Snapshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emulator/machine/Snapshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emulator/video/BufferedImageScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emulator/video/BufferedImageScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller.java" afterDir="false" />
     </list>
     <ignored path="C:/production/james/" />
@@ -67,37 +793,41 @@
     <session id="2090209019">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="6" />
+          <entry key="project.open.time.1" value="8" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.8" value="5" />
+          <entry key="project.open.time.2" value="5" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.8" value="6" />
           <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="40" />
+          <entry key="java" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="40" />
+          <entry key="JAVA" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3023" />
-          <entry key="txt" value="66" />
+          <entry key="java" value="5579" />
+          <entry key="txt" value="87" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3023" />
-          <entry key="PLAIN_TEXT" value="66" />
+          <entry key="JAVA" value="5579" />
+          <entry key="PLAIN_TEXT" value="87" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -110,73 +840,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emulator/cpu/z80/Z80.java">
+        <entry file="file://$PROJECT_DIR$/src/main/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emulator/cpu/z80/Z80Pair.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emulator/machine/FullMachine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="240">
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
               <folding>
-                <element signature="e#948#949#0" expanded="true" />
-                <element signature="e#990#991#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emulator/machine/Keyboard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="94" column="46" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
-              <folding>
-                <element signature="e#6651#6652#0" expanded="true" />
-                <element signature="e#6678#6679#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emulator/machine/PartMachine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
-              <folding>
-                <element signature="e#1521#1522#0" expanded="true" />
-                <element signature="e#1550#1551#0" expanded="true" />
-                <element signature="e#1991#1992#0" expanded="true" />
-                <element signature="e#2020#2021#0" expanded="true" />
-                <element signature="e#2066#2067#0" expanded="true" />
-                <element signature="e#2094#2095#0" expanded="true" />
-                <element signature="e#2139#2140#0" expanded="true" />
-                <element signature="e#2161#2162#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/Controller.java">
+        <entry file="file://$PROJECT_DIR$/src/ai/ensemble/EnsembleAI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+            <state relative-caret-position="176">
+              <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ai/ensemble/GhostDodger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ai/rhea/RHEA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="87" column="15" selection-start-line="87" selection-start-column="15" selection-end-line="87" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,19 +882,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emulator/machine/Snapshot.java">
+        <entry file="file://$PROJECT_DIR$/src/ai/common/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emulator/cpu/z80/Z80Regs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="10" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
+            <state relative-caret-position="9218">
+              <caret line="450" column="21" selection-start-line="450" selection-start-column="21" selection-end-line="450" selection-end-column="21" />
+              <folding>
+                <element signature="e#7579#7580#0" expanded="true" />
+                <element signature="e#7600#7601#0" expanded="true" />
+                <element signature="e#12171#12172#0" expanded="true" />
+                <element signature="e#12228#12229#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -205,17 +899,48 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/SimGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4928">
-              <caret line="241" selection-start-line="241" selection-end-line="241" />
+            <state relative-caret-position="8470">
+              <caret line="422" column="64" selection-start-line="422" selection-start-column="64" selection-end-line="422" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/maze/SimMaze.java">
+        <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/SimPacman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1034">
-              <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+            <state relative-caret-position="1606">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.sdkman/candidates/java/current/src.zip!/java/awt/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3850">
+              <caret line="213" column="19" selection-start-line="213" selection-start-column="19" selection-end-line="213" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ai/mcts/MCTSPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="76" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/emulator/machine/PartMachine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1386">
+              <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+              <folding>
+                <element signature="e#1610#1611#0" expanded="true" />
+                <element signature="e#1632#1633#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -235,6 +960,8 @@
       <find>emulator</find>
       <find>snap.RAM</find>
       <find>RAM[0x4</find>
+      <find>\	\	if \(isKeyPressed\(OSD_KEY_ESC\)\) \{\n\	\	\	 if \(device\.getFullScreenWindow\(\) \!\= null\) \{\n\	\	\	\	device\.setFullScreenWindow\(null\)\;\n\	\	\	\	frame\.setBounds\(1\, 1\, 458\, 606\)\;\n\	\	\	\}\n\	\	\}</find>
+      <find>Null pointer</find>
     </findStrings>
     <replaceStrings>
       <replace>RAM[0x0</replace>
@@ -259,30 +986,43 @@
         <option value="$PROJECT_DIR$/src/ai/mcts/TreeNodeSim.java" />
         <option value="$PROJECT_DIR$/res/Ensemble_no_fruit_no_emu.txt" />
         <option value="$PROJECT_DIR$/res/MCTS_no_emu.txt" />
-        <option value="$PROJECT_DIR$/src/ai/mcts/MCTSPlayer.java" />
         <option value="$PROJECT_DIR$/res/MCTS_best.txt" />
         <option value="$PROJECT_DIR$/src/ai/ensemble/RulesGhostDodger.java" />
         <option value="$PROJECT_DIR$/res/Ensemble_best.txt" />
         <option value="$PROJECT_DIR$/res/Ensemble_no_fruit.txt" />
         <option value="$PROJECT_DIR$/src/ai/ensemble/GhostChaser.java" />
         <option value="$PROJECT_DIR$/src/ai/ensemble/PillMuncher.java" />
-        <option value="$PROJECT_DIR$/src/ai/common/Maze.java" />
         <option value="$PROJECT_DIR$/src/ai/common/Emulator.java" />
         <option value="$PROJECT_DIR$/src/ai/common/Game.java" />
-        <option value="$PROJECT_DIR$/src/ai/ensemble/GhostDodger.java" />
         <option value="$PROJECT_DIR$/src/ai/ensemble/GhostMuncher.java" />
         <option value="$PROJECT_DIR$/src/emulator/machine/Snapshot.java" />
-        <option value="$PROJECT_DIR$/src/ai/ensemble/EnsembleAI.java" />
-        <option value="$PROJECT_DIR$/src/ai/common/simulator/SimGame.java" />
         <option value="$PROJECT_DIR$/src/ai/common/simulator/ghosts/AbstractGhost.java" />
-        <option value="$PROJECT_DIR$/src/ai/common/simulator/SimPacman.java" />
         <option value="$PROJECT_DIR$/src/ai/common/simulator/maze/SimMaze.java" />
         <option value="$PROJECT_DIR$/src/emulator/cpu/z80/Z80Regs.java" />
         <option value="$PROJECT_DIR$/src/emulator/cpu/z80/Z80Pair.java" />
-        <option value="$PROJECT_DIR$/src/emulator/machine/PartMachine.java" />
         <option value="$PROJECT_DIR$/src/emulator/machine/FullMachine.java" />
+        <option value="$PROJECT_DIR$/src/emulator/games/Pacman.java" />
         <option value="$PROJECT_DIR$/src/emulator/machine/Keyboard.java" />
+        <option value="$PROJECT_DIR$/src/emulator/video/Pengo.java" />
+        <option value="$PROJECT_DIR$/src/emulator/video/BufferedImageScreen.java" />
+        <option value="$PROJECT_DIR$/src/ai/ensemble/GhostDodger.java" />
+        <option value="$PROJECT_DIR$/src/emulator/cpu/lambda/Z80Pair.java" />
+        <option value="$PROJECT_DIR$/src/emulator/cpu/lambda/Z80Regs.java" />
+        <option value="$PROJECT_DIR$/src/emulator/cpu/lambda/Z80.java" />
+        <option value="$PROJECT_DIR$/src/emulator/cpu/z80/Z80.java" />
+        <option value="$PROJECT_DIR$/src/emulator/machine/PartMachine.java" />
+        <option value="$PROJECT_DIR$/src/ai/common/simulator/data/GhostData.java" />
+        <option value="$PROJECT_DIR$/src/ai/common/simulator/data/SimData.java" />
+        <option value="$PROJECT_DIR$/src/ai/rhea/Agent.java" />
+        <option value="$PROJECT_DIR$/src/ai/rhea/Individual.java" />
+        <option value="$PROJECT_DIR$/src/ai/mcts/MCTSPlayer.java" />
+        <option value="$PROJECT_DIR$/src/ai/AbstractAI.java" />
+        <option value="$PROJECT_DIR$/src/ai/common/Maze.java" />
+        <option value="$PROJECT_DIR$/src/ai/common/simulator/SimPacman.java" />
+        <option value="$PROJECT_DIR$/src/ai/common/simulator/SimGame.java" />
+        <option value="$PROJECT_DIR$/src/ai/rhea/RHEA.java" />
         <option value="$PROJECT_DIR$/src/main/Controller.java" />
+        <option value="$PROJECT_DIR$/src/ai/ensemble/EnsembleAI.java" />
       </list>
     </option>
   </component>
@@ -431,8 +1171,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -443,7 +1183,12 @@
             <path>
               <item name="james" type="b2602c69:ProjectViewProjectNode" />
               <item name="james" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="james" type="b2602c69:ProjectViewProjectNode" />
+              <item name="james" type="462c0819:PsiDirectoryNode" />
+              <item name="roms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="james" type="b2602c69:ProjectViewProjectNode" />
@@ -492,20 +1237,34 @@
               <item name="james" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ai" type="462c0819:PsiDirectoryNode" />
+              <item name="hello" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="james" type="b2602c69:ProjectViewProjectNode" />
+              <item name="james" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ai" type="462c0819:PsiDirectoryNode" />
               <item name="mcts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="james" type="b2602c69:ProjectViewProjectNode" />
               <item name="james" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="emulator" type="462c0819:PsiDirectoryNode" />
+              <item name="ai" type="462c0819:PsiDirectoryNode" />
+              <item name="random" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="james" type="b2602c69:ProjectViewProjectNode" />
+              <item name="james" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ai" type="462c0819:PsiDirectoryNode" />
+              <item name="rhea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="james" type="b2602c69:ProjectViewProjectNode" />
               <item name="james" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="emulator" type="462c0819:PsiDirectoryNode" />
-              <item name="z80" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="james" type="b2602c69:ProjectViewProjectNode" />
@@ -530,8 +1289,8 @@
     <property name="SearchEverywhereHistoryKey" value="insertCoin&#9;PSI&#9;JAVA://ai.common.Game#insertCoin" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562080326220" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568709168453" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/roms" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -742,7 +1501,18 @@
       <workItem from="1556804118575" duration="1986000" />
       <workItem from="1557393084038" duration="37000" />
       <workItem from="1558343563643" duration="1252000" />
-      <workItem from="1562061159527" duration="7703000" />
+      <workItem from="1562061159527" duration="10432000" />
+      <workItem from="1562839027328" duration="2192000" />
+      <workItem from="1563443378295" duration="86000" />
+      <workItem from="1566457375773" duration="1536000" />
+      <workItem from="1566497229458" duration="1327000" />
+      <workItem from="1566896485732" duration="597000" />
+      <workItem from="1567158356447" duration="621000" />
+      <workItem from="1568029077913" duration="13238000" />
+      <workItem from="1568623509774" duration="10482000" />
+      <workItem from="1568882215489" duration="3186000" />
+      <workItem from="1569065574414" duration="17000" />
+      <workItem from="1575648562211" duration="1349000" />
     </task>
     <task id="LOCAL-00001" summary="multi-threaded and better power-pill avoidance (probably too much)">
       <created>1541691122760</created>
@@ -758,11 +1528,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556020875314</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added fullscreen mode">
+      <created>1562080501904</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562080501905</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100260000" />
+    <option name="totallyTimeSpent" value="137620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-1" width="2560" height="1413" extended-state="6" />
@@ -774,21 +1551,22 @@
       <window_info id="Image Layers" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Nl-Palette" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.22752586" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.18019094" />
       <window_info id="Structure" order="7" weight="0.25" />
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.3297414" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.32919255" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.3297414" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.1560559" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32919255" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.4021739" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Maven Projects" order="0" weight="0.32959402" />
       <window_info anchor="right" id="Properties" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -808,25 +1586,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="multi-threaded and better power-pill avoidance (probably too much)" />
-    <option name="LAST_COMMIT_MESSAGE" value="multi-threaded and better power-pill avoidance (probably too much)" />
+    <MESSAGE value="Added fullscreen mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fullscreen mode" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/results.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ai/common/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -834,31 +1603,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/mcts/MCTSPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/MCTS_with_emu.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/RulesGhostDodger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/FruitMuncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -900,80 +1648,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/emulator/games/Pacman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="118" column="15" selection-start-line="118" selection-start-column="15" selection-end-line="118" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emulator/video/Pengo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/common/Maze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6585">
-          <caret line="467" column="16" selection-start-line="467" selection-start-column="16" selection-end-line="467" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/mcts/TreeNodeSim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/data/SimData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/common/Emulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/common/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="50" column="24" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emulator/video/Screen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/emulator/video/GenericVideo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7150">
           <caret line="350" column="15" selection-start-line="350" selection-start-column="15" selection-end-line="350" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/GhostChaser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/PillMuncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -991,73 +1669,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/EnsembleAI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/AbstractAI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/ghosts/AbstractGhost.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="994">
           <caret line="426" column="22" selection-start-line="426" selection-start-column="22" selection-end-line="426" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/SimPacman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="151" column="18" selection-start-line="151" selection-start-column="18" selection-end-line="151" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/GhostDodger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emulator/cpu/z80/Z80.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emulator/machine/Snapshot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emulator/cpu/z80/Z80Regs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/SimGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4928">
-          <caret line="241" selection-start-line="241" selection-end-line="241" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/maze/SimMaze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -1068,52 +1683,283 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/emulator/machine/PartMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
-          <folding>
-            <element signature="e#1521#1522#0" expanded="true" />
-            <element signature="e#1550#1551#0" expanded="true" />
-            <element signature="e#1991#1992#0" expanded="true" />
-            <element signature="e#2020#2021#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
-            <element signature="e#2094#2095#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
-            <element signature="e#2161#2162#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/emulator/machine/FullMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state relative-caret-position="594">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emulator/cpu/z80/Z80Regs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emulator/games/Pacman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2420">
+          <caret line="126" column="12" selection-start-line="126" selection-start-column="12" selection-end-line="126" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emulator/video/Pengo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2838">
+          <caret line="141" column="38" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emulator/video/BufferedImageScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emulator/video/Screen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emulator/cpu/lambda/Z80Pair.java" />
+    <entry file="file://$PROJECT_DIR$/src/emulator/cpu/lambda/Z80Regs.java" />
+    <entry file="file://$PROJECT_DIR$/src/emulator/cpu/lambda/Z80.java" />
+    <entry file="file://$PROJECT_DIR$/src/emulator/machine/Keyboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2178">
+          <caret line="102" column="13" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emulator/machine/Machine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/PillMuncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/RulesGhostDodger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emulator/cpu/z80/Z80.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39138">
+          <caret line="1799" column="17" selection-start-line="1799" selection-start-column="17" selection-end-line="1799" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/FruitMuncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/GhostChaser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/maze/SimMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/mcts/TreeNodeSim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="830">
+          <caret line="45" column="74" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="74" />
           <folding>
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#3354#3355#0" expanded="true" />
+            <element signature="e#3410#3411#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/emulator/machine/Keyboard.java">
+    <entry file="file://$PROJECT_DIR$/src/ai/AI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="94" column="46" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
+        <state relative-caret-position="44">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/hello/HelloWorldAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="130" column="5" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="130" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/random/RandomAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/data/SimData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/data/GhostData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emulator/machine/Snapshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/common/Emulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2288">
+          <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
           <folding>
-            <element signature="e#6651#6652#0" expanded="true" />
-            <element signature="e#6678#6679#0" expanded="true" />
+            <element signature="e#2690#2691#0" expanded="true" />
+            <element signature="e#2730#2731#0" expanded="true" />
+            <element signature="e#3784#3785#0" expanded="true" />
+            <element signature="e#3820#3821#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/rhea/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="111" column="71" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/common/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4664">
+          <caret line="230" selection-start-line="230" selection-end-line="230" />
+          <folding>
+            <element signature="e#5921#5922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/AbstractAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/common/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9218">
+          <caret line="450" column="21" selection-start-line="450" selection-start-column="21" selection-end-line="450" selection-end-column="21" />
+          <folding>
+            <element signature="e#7579#7580#0" expanded="true" />
+            <element signature="e#7600#7601#0" expanded="true" />
+            <element signature="e#12171#12172#0" expanded="true" />
+            <element signature="e#12228#12229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/SimGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8470">
+          <caret line="422" column="64" selection-start-line="422" selection-start-column="64" selection-end-line="422" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/common/simulator/SimPacman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1606">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.sdkman/candidates/java/current/src.zip!/java/awt/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3850">
+          <caret line="213" column="19" selection-start-line="213" selection-start-column="19" selection-end-line="213" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/mcts/MCTSPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="76" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emulator/machine/PartMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+          <folding>
+            <element signature="e#1610#1611#0" expanded="true" />
+            <element signature="e#1632#1633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/rhea/RHEA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="87" column="15" selection-start-line="87" selection-start-column="15" selection-end-line="87" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        <state relative-caret-position="240">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/GhostDodger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ai/ensemble/EnsembleAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1122,19 +1968,13 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor>
-            <show-content>
-              <type id="artifact" />
-              <type id="library" />
-              <type id="jpa-descriptors" />
-              <type id="javaee-facet-resources" />
-            </show-content>
-          </artifact-editor>
+          <artifact-editor />
           <last-edited>james:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

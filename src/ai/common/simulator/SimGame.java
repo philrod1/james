@@ -318,6 +318,9 @@ public class SimGame {
 	}
 	
 	public boolean advanceToNextDecisionPoint(Point target, Maze maze) {
+		if (target == null) {
+			return false;
+		}
 		simPacman.setTarget(target);
 		while(!simPacman.tile.equals(target) && this.maze.pillCount > 0) {
 			if(!step()) {
@@ -374,6 +377,9 @@ public class SimGame {
 
 	public boolean advanceToNextDecisionPoint(MOVE move, Maze maze) {
 		Point target = maze.getNextCornerOrJunction(simPacman.tile, move);
+		if (target == null) {
+			return false;
+		}
 		return advanceToNextDecisionPoint(target, maze);
 	}
 
@@ -415,6 +421,7 @@ public class SimGame {
 			Point pacman = simPacman.tile;
 			while(!pacman.equals(target)) {
 				MOVE move = maze.getMoveTowards(pacman, target);
+
 				if(move == null) {
 					return -1;
 				}

@@ -2,6 +2,8 @@ package ai.ensemble;
 
 import java.awt.Point;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import ai.common.simulator.SimGame;
 import emulator.machine.Snapshot;
@@ -12,7 +14,7 @@ import ai.common.MOVE;
 public class GhostDodger implements Voice {
 	
 	private final SimGame sim;
-	private final int maxPaths = 4;
+	private final int maxPaths = 8;
 	private final int maxDepth = 8;
 	
 	public GhostDodger(Game game, int pacPause) {

@@ -10,6 +10,7 @@ public abstract class AbstractAI implements AI {
 
 	@Override
 	public void run() {
+		System.out.println("Running AI");
 		while(running) {
 			switch(game.getState()) {
 			case PLAYING:
@@ -45,6 +46,7 @@ public abstract class AbstractAI implements AI {
 				catch (InterruptedException e) { running = false; }
 			}
 		}
+		System.out.println("HERE");
 	}
 	
 	protected abstract void reset();

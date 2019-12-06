@@ -222,7 +222,8 @@ public class Maze {
 		} catch (NullPointerException e) {
 			System.err.println("Null pointer exception (" + n1 + " and " + n2 + ") in maze " + mazeId);
 			e.printStackTrace();
-			return null;
+//			return null;
+			throw e;
 		}
 	}
 	

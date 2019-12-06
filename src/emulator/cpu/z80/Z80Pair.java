@@ -1,46 +1,44 @@
 package emulator.cpu.z80;
 
 
-import java.io.Serializable;
+public class Z80Pair {
 
-public class Z80Pair implements Serializable {
+	public int h, l, w;
 
-	public int H, L, W;
-
-	public void SetH(int val) {
-		H = val;
-		W = (H << 8) | L;
+	public void setH(int value) {
+		h = value;
+		w = (h << 8) | l;
 	}
 
-	public void SetL(int val) {
-		L = val;
-		W = (H << 8) | L;
+	public void setL(int value) {
+		l = value;
+		w = (h << 8) | l;
 	}
 
-	public void SetW(int val) {
-		W = val;
-		H = W >> 8;
-		L = W & 0xFF;
+	public void setW(int value) {
+		w = value;
+		h = w >> 8;
+		l = w & 0xFF;
 	}
 
-	public void AddH(int val) {
-		H = (H + val) & 0xFF;
-		W = (H << 8) | L;
+	public void addH(int value) {
+		h = (h + value) & 0xFF;
+		w = (h << 8) | l;
 	}
 
-	public void AddW(int val) {
-		W = (W + val) & 0xFFFF;
-		H = W >> 8;
-		L = W & 0xFF;
+	public void addW(int value) {
+		w = (w + value) & 0xFFFF;
+		h = w >> 8;
+		l = w & 0xFF;
 	}
 
-	public void AddL(int val) {
-		L = (L + val) & 0xFF;
-		W = (H << 8) | L;
+	public void addL(int value) {
+		l = (l + value) & 0xFF;
+		w = (h << 8) | l;
 	}
 	
 	@Override
 	public String toString() {
-		return H + " " + L + " " + W;
+		return h + " " + l + " " + w;
 	}
 }

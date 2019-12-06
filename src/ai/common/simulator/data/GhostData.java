@@ -27,15 +27,15 @@ public class GhostData {
 		case 3: pillCount = RAM[0x0e11]; break;
 		default: pillCount = 0;
 		}
-		int base = 0x4D56 + ghost * 12;
+		int base = 0x0D56 + ghost * 12;
 		normal = (RAM[base+1] << 24) | (RAM[base]   << 16) | (RAM[base+3]  << 8) | (RAM[base+2]);
 		scared = (RAM[base+5] << 24) | (RAM[base+4] << 16) | (RAM[base+7]  << 8) | (RAM[base+6]);
 		slow   = (RAM[base+9] << 24) | (RAM[base+8] << 16) | (RAM[base+11] << 8) | (RAM[base+10]);
 		if(ghost==0) {
 			cruiseLevel = RAM[0x0db6] + RAM[0x0db7];
-			base = 0x4D52;
+			base = 0x0D52;
 			elroy1 = (RAM[base+1] << 24) | (RAM[base] << 16) | (RAM[base+3] << 8) | (RAM[base+2]);
-			base = 0x4D4E;
+			base = 0x0D4E;
 			elroy2 = (RAM[base+1] << 24) | (RAM[base] << 16) | (RAM[base+3] << 8) | (RAM[base+2]);
 		} else {
 			cruiseLevel = 0;

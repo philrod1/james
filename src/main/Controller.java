@@ -11,6 +11,7 @@ import ai.AI;
 import ai.common.Game;
 import ai.ensemble.EnsembleAI;
 import ai.mcts.MCTSPlayer;
+import ai.rhea.RHEA;
 import emulator.games.Pacman;
 import emulator.machine.FullMachine;
 
@@ -36,26 +37,27 @@ public class Controller {
 			frame.getContentPane().add(machine.getScreen());
 			frame.addKeyListener(machine.getKeyboard());
 			frame.pack();
-			device.setFullScreenWindow(frame);
+//			device.setFullScreenWindow(frame);
 			frame.setResizable(true);
 			frame.setVisible(true);
-			System.out.println(frame.getBounds());
 		});
 
 		final Game game = new Game(machine);
 //		machine.revertToSnapshot(112);
 
+//		final AI ai = new RHEA(game);
 		final AI ai = new EnsembleAI(game);
 //		final AI ai = new MCTSPlayer(game);
 
 		final Runnable task = () -> {
-				game.update();
-				machine.step();
+			game.update();
+			machine.step();
 		};
 
 		ScheduledExecutorService ses = Executors.newScheduledThreadPool(2);
 		ses.scheduleAtFixedRate(task, 0, (int)((1000 / machine.getFPS()) /gameSpeed), TimeUnit.MILLISECONDS);
-		ses.schedule(ai,0, TimeUnit.MILLISECONDS);
+
+		ses.schedule(ai,1000, TimeUnit.MILLISECONDS);
 
 	}
 

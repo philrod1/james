@@ -46,7 +46,7 @@ public class SimData {
 //		for(int i = 0 ; i < 4 ; i++) {
 //			System.out.println(pillPositions[i].length);
 //		}
-		int start = 0x4000;
+		int start = 0x0000;
 		for(Point p : pillPositions[mazeId]) {
 			int address = start + (31-p.x) * 32 + p.y;
 //			System.out.println(p + "  RAM[0x" + Integer.toHexString(address) + "] = " + (int)(RAM[address]));
@@ -66,9 +66,9 @@ public class SimData {
 		globalPillCount = RAM[0x0d9f];
 		globalMode = RAM[0x0e12] == 1;
 		pacmanEnenergised = RAM[0x0da6]==1;
-		int base = 0x4D46;
+		int base = 0x0D46;
 		pacmanNormalPattern = (RAM[base+1] << 24) | (RAM[base] << 16) | (RAM[base+3] << 8) | (RAM[base+2]);
-		base = 0x4D4A;
+		base = 0x0D4A;
 		pacmanEnergisedPattern = (RAM[base+1] << 24) | (RAM[base] << 16) | (RAM[base+3] << 8) | (RAM[base+2]);
 	}
 	
@@ -104,13 +104,13 @@ public class SimData {
 		pacmanEnenergised = game.simPacman.isEnergised();
 		pillData = game.maze.getPills();
 		powerPillData = game.maze.getPowerPills();
-		pillData = new LinkedList<Point>();
+		pillData = new LinkedList<>();
 		for(Point p : pillPositions[mazeId]) {
 			if(game.maze.getTile(p).getValue() == 1) {
 				pillData.add(p);
 			}
 		}
-		powerPillData = new LinkedList<Point>();
+		powerPillData = new LinkedList<>();
 		for(Point p : powerPillPositions[mazeId]) {
 			if(game.maze.getTile(p).getValue() == 2) {
 				powerPillData.add(p);
@@ -132,11 +132,11 @@ public class SimData {
 	}
 
 	public List<Point> getPillData() {
-		return new LinkedList<Point>(pillData);
+		return new LinkedList<>(pillData);
 	}
 	
 	public List<Point> getPowerPillData() {
-		return new LinkedList<Point>(powerPillData);
+		return new LinkedList<>(powerPillData);
 	}
 	
 	private int getLastScore(char[] RAM) {

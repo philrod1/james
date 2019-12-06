@@ -56,6 +56,7 @@ public class BufferedImageScreen extends JPanel implements Screen {
 			osx = 0;
 			osy = (getHeight() - h) / 2;
 		}
+
 		g2.drawImage(bi[(biIndex+1)%2], osx, osy, w, h, null);
 		g2.dispose();
 		g.dispose();

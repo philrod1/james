@@ -29,12 +29,12 @@ public class EnsembleAI extends AbstractAI {
 	private Point target = null;
 	
 	private double[] weights = new double[]{
+//			1.0,    // Ghost Dodger
 			1.0,    // Ghost Dodger
-			1.0,    // Ghost Dodger
-            0.1,   // Pill Muncher
+            0.3,   // Pill Muncher
             0.5,    // Fruit Muncher
             1.0,     // Ghost Muncher
-			1.0		// Ghost chaser
+			5.0		// Ghost chaser
 	};
 
 	private final Random rng = new Random();
@@ -45,7 +45,7 @@ public class EnsembleAI extends AbstractAI {
 //		sim = new SimGame(game);
 		this.game = game;
 		voices = new Voice[]{
-				new GhostDodger(game, 1),
+//				new GhostDodger(game, 1),
 				new GhostDodger(game, 2),
 				new PillMuncher(),
 				new FruitMuncher(),
@@ -125,11 +125,11 @@ public class EnsembleAI extends AbstractAI {
 		double[] combined = new double[4];
 		for(int i = 0 ; i < 4 ; i++) {
 			combined[i] = 0;
-			for(int j = 2 ; j < prefs.length ; j++) {
+			for(int j = 1 ; j < prefs.length ; j++) {
 				combined[i] += weights[j] * prefs[j][i];
 			}
 			combined[i] *= (weights[0] * prefs[0][i]);
-			combined[i] *= (weights[1] * prefs[1][i]);
+//			combined[i] *= (weights[1] * prefs[1][i]);
 		}
 		return combined;
 	}
