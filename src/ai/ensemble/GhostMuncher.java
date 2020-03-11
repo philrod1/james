@@ -13,10 +13,14 @@ public class GhostMuncher implements Voice {
 
 	private final int maxPaths = 20;
 	private final int maxDepth = 6;
+	private final SimGame sim;
+
+	public GhostMuncher(Game game) {
+		sim = new SimGame(game);
+	}
 
 	@Override
 	public double[] getPreferences(Game game, List<MOVE> moves) {
-		SimGame sim = new SimGame(game);
 		long stop = System.currentTimeMillis() + 60;
 		double[] prefs = new double[4];
 		if(game.pacman.isEnergised()) {

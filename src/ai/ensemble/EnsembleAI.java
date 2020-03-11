@@ -34,7 +34,7 @@ public class EnsembleAI extends AbstractAI {
             0.3,   // Pill Muncher
             0.5,    // Fruit Muncher
             1.0,     // Ghost Muncher
-			5.0		// Ghost chaser
+//			5.0		// Ghost chaser
 	};
 
 	private final Random rng = new Random();
@@ -49,8 +49,8 @@ public class EnsembleAI extends AbstractAI {
 				new GhostDodger(game, 2),
 				new PillMuncher(),
 				new FruitMuncher(),
-				new GhostMuncher(),
-				new GhostChaser()
+				new GhostMuncher(game),
+//				new GhostChaser()
 		};
 	}
 

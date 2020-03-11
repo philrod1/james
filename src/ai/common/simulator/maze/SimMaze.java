@@ -84,6 +84,7 @@ public class SimMaze {
 	}
 	
 	private void buildGraphs() {
+		System.out.println("buildGraphs");
 		for(int mazeID = 1 ; mazeID < 5 ; mazeID++) {
 			try {
 				char[][] ram = new char[WIDTH][HEIGHT];
